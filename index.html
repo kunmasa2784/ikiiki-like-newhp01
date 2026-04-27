@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>船橋市いきいき同窓会 | 情報の共有と発信</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .bg-gradient-soft {
+            background: linear-gradient(135deg, #f0fdf4 0%, #fef3c7 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ナビゲーション -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-white text-xl">🐞</div>
+                <span class="font-bold text-xl text-emerald-800 hidden sm:block">船橋市いきいき同窓会</span>
+                <span class="font-bold text-xl text-emerald-800 sm:hidden">いきいき同窓会</span>
+            </div>
+            <div class="hidden md:flex gap-6 text-sm font-medium">
+                <a href="#news" class="hover:text-emerald-600 transition">新着情報</a>
+                <a href="#activities" class="hover:text-emerald-600 transition">活動紹介</a>
+                <a href="#events" class="hover:text-emerald-600 transition">三大行事</a>
+                <a href="#contact" class="hover:text-emerald-600 transition">お問い合わせ</a>
+            </div>
+            <button class="md:hidden p-2 text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <header class="relative overflow-hidden bg-emerald-600 text-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">仲間と一緒に楽しく元気に</h1>
+            <p class="text-lg md:text-xl opacity-90 mb-8">情報の共有と発信をめざして、皆さまの活動をサポートします</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#join" class="bg-amber-400 hover:bg-amber-500 text-amber-950 font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                    入会申込みはこちら
+                </a>
+                <a href="#payment" class="bg-white hover:bg-gray-100 text-emerald-700 font-bold py-3 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1">
+                    会費納入方法
+                </a>
+            </div>
+        </div>
+        <!-- 背景装飾 -->
+        <svg class="absolute bottom-0 left-0 w-full opacity-10" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path fill="#ffffff" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,149.3C672,149,768,203,864,224C960,245,1056,235,1152,202.7C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        
+        <!-- 新着情報 (コンパクト版) -->
+        <section id="news" class="mb-16">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-1 h-6 bg-emerald-500 rounded-full"></div>
+                    <h2 class="text-xl font-bold">新着情報</h2>
+                </div>
+                <button class="text-emerald-700 text-sm font-semibold hover:underline">すべて見る</button>
+            </div>
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                <div class="divide-y divide-gray-100">
+                    <a href="#" class="flex items-baseline gap-4 p-4 hover:bg-gray-50 transition group">
+                        <span class="text-xs font-bold text-gray-400 w-20 shrink-0">2024.04.20</span>
+                        <span class="text-sm md:text-base font-medium group-hover:text-emerald-700 transition">🔴 同窓会費納入方法について更新しました</span>
+                    </a>
+                    <a href="#" class="flex items-baseline gap-4 p-4 hover:bg-gray-50 transition group">
+                        <span class="text-xs font-bold text-gray-400 w-20 shrink-0">2024.04.18</span>
+                        <span class="text-sm md:text-base font-medium group-hover:text-emerald-700 transition">🔵 同好会入会申込みの受付を開始しました</span>
+                    </a>
+                    <a href="#" class="flex items-baseline gap-4 p-4 hover:bg-gray-50 transition group">
+                        <span class="text-xs font-bold text-gray-400 w-20 shrink-0">2024.04.15</span>
+                        <span class="text-sm md:text-base font-medium group-hover:text-emerald-700 transition">🦋 季節のご挨拶：穀雨を迎えました</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 活動カテゴリー -->
+        <section id="activities" class="mb-16">
+            <div class="flex items-center gap-3 mb-8 text-center justify-center">
+                <h2 class="text-2xl md:text-3xl font-bold">幅広い活動カテゴリー</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+                <!-- いきいき運営委員会 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 text-center ring-2 ring-emerald-50">
+                    <div class="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">👥</div>
+                    <h3 class="font-bold text-xl mb-2">いきいき運営委員会</h3>
+                    <p class="text-gray-600 text-sm mb-4">同窓会の円滑な運営を支えるいきいき運営委員会の活動報告です。</p>
+                    <button class="text-emerald-600 font-semibold text-sm border border-emerald-200 px-4 py-2 rounded-lg hover:bg-emerald-50">詳しく見る</button>
+                </div>
+                <!-- スポーツ -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 text-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">🏆</div>
+                    <h3 class="font-bold text-xl mb-2">スポーツ同好会</h3>
+                    <p class="text-gray-600 text-sm mb-4">グラウンドゴルフ、卓球など、各スポーツ団体の活動報告です。</p>
+                    <button class="text-blue-600 font-semibold text-sm border border-blue-200 px-4 py-2 rounded-lg hover:bg-blue-50">詳しく見る</button>
+                </div>
+                <!-- 文化・同好会 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 text-center">
+                    <div class="w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">🎨</div>
+                    <h3 class="font-bold text-xl mb-2">文化・同好会</h3>
+                    <p class="text-gray-600 text-sm mb-4">カルチャー教室や作品展など、文化的な活動を紹介しています。</p>
+                    <button class="text-amber-600 font-semibold text-sm border border-amber-200 px-4 py-2 rounded-lg hover:bg-amber-50">詳しく見る</button>
+                </div>
+                <!-- 三大行事 -->
+                <div id="events" class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-100 text-center">
+                    <div class="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">🎪</div>
+                    <h3 class="font-bold text-xl mb-2">三大行事</h3>
+                    <p class="text-gray-600 text-sm mb-4">体育祭・芸能大会・作品展のイベントのお知らせと報告です。</p>
+                    <button class="text-red-600 font-semibold text-sm border border-red-200 px-4 py-2 rounded-lg hover:bg-red-50">詳しく見る</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 外部リンク・お問い合わせ -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <!-- カレンダー・DB -->
+            <section class="bg-gradient-soft p-8 rounded-3xl">
+                <h2 class="text-2xl font-bold mb-6">便利なリンク</h2>
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center justify-between bg-white p-4 rounded-xl shadow-sm hover:bg-gray-50 transition group">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">📅</span>
+                            <span class="font-medium">いきいき同窓会カレンダー</span>
+                        </div>
+                        <span class="text-gray-400 group-hover:translate-x-1 transition">→</span>
+                    </a>
+                    <a href="#" class="flex items-center justify-between bg-white p-4 rounded-xl shadow-sm hover:bg-gray-50 transition group">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">📁</span>
+                            <span class="font-medium">データベース（会報・会則）</span>
+                        </div>
+                        <span class="text-gray-400 group-hover:translate-x-1 transition">→</span>
+                    </a>
+                    <a href="#" class="flex items-center justify-between bg-white p-4 rounded-xl shadow-sm hover:bg-gray-50 transition group">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">🏢</span>
+                            <span class="font-medium">他団体のお知らせ</span>
+                        </div>
+                        <span class="text-gray-400 group-hover:translate-x-1 transition">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- お問い合わせフォーム -->
+            <section id="contact" class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+                <h2 class="text-2xl font-bold mb-2">お問い合わせ</h2>
+                <p class="text-gray-600 mb-6 text-sm">ご意見・ご質問などお気軽にご連絡ください。</p>
+                <form onsubmit="event.preventDefault();" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">お名前</label>
+                        <input type="text" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="船橋 太郎">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">メールアドレス</label>
+                        <input type="email" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="example@mail.com">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-1">お問い合わせ内容</label>
+                        <textarea class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-emerald-500 h-32" placeholder="メッセージを入力してください"></textarea>
+                    </div>
+                    <button class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg transition shadow-md">
+                        送信する
+                    </button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-900 text-gray-400 py-12 px-4 mt-20">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <h2 class="text-white text-xl font-bold mb-2">船橋市いきいき同窓会</h2>
+                <p class="text-sm">情報の共有と発信をめざして</p>
+            </div>
+            <div class="flex gap-6 text-sm">
+                <a href="#" class="hover:text-white transition">ホーム</a>
+                <a href="#" class="hover:text-white transition">同窓会の紹介</a>
+                <a href="#" class="hover:text-white transition">プライバシーポリシー</a>
+            </div>
+            <p class="text-xs">© 2024 船橋市いきいき同窓会. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
