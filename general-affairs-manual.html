@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>総務部 業務引き継ぎマニュアル</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Serif (for journal-like headings) and Noto Sans (for readability) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 基本的なフォント設定 */
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #334155; /* Slate 700 */
+            background-color: #f8fafc; /* Slate 50 */
+            line-height: 1.7;
+        }
+        
+        /* ジャーナル風のセリフ体フォント */
+        .journal-font {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* テーブルのスタイリング（学術誌風のシンプルな罫線） */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            background-color: #ffffff;
+        }
+        th, td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            font-weight: 700;
+            color: #1e293b;
+            background-color: #f1f5f9;
+        }
+        tr:last-child td {
+            border-bottom: 2px solid #cbd5e1;
+        }
+
+        /* カードホバーエフェクト */
+        .info-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+        }
+    </style>
+</head>
+<body class="py-12 px-4 sm:px-6 lg:px-8">
+
+    <!-- Main Article Container -->
+    <main class="max-w-4xl mx-auto bg-white py-12 px-8 sm:px-16 shadow-sm rounded-xl border border-gray-100">
+        
+        <!-- Header / Abstract Section -->
+        <header class="mb-14 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-slate-100 text-slate-600 text-xs font-bold tracking-widest uppercase mb-4">
+                Operational Guidelines
+            </span>
+            <h1 class="journal-font text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+                総務部 業務引き継ぎマニュアル
+            </h1>
+            
+            <!-- Abstract Box -->
+            <div class="mt-10 p-6 sm:p-8 bg-indigo-50/50 border-l-4 border-indigo-500 text-left rounded-r-lg">
+                <h2 class="journal-font text-lg font-bold text-indigo-900 mb-3">概要 (Abstract)</h2>
+                <p class="text-indigo-900/80 text-sm sm:text-base">
+                    本ドキュメントは、総務部の年間スケジュール、主要な会議運営、および施設管理などの業務内容を体系的にまとめたものである。新任担当者の円滑な業務習得、ならびに日々の業務フローの確認・標準化を目的とし、可読性と実用性を重視して編纂されている。
+                </p>
+            </div>
+        </header>
+
+        <!-- Section 1: 年間スケジュール (Teal Theme) -->
+        <section class="mb-16">
+            <h2 class="journal-font text-2xl font-bold text-slate-800 border-b-2 border-teal-500 pb-2 mb-8 flex items-center">
+                <span class="bg-teal-100 text-teal-800 text-sm py-1 px-3 rounded-full mr-3 font-sans">Section 1</span>
+                年間主要スケジュール
+            </h2>
+            <p class="mb-6 text-slate-600">総務部の1年間の流れと、特に締め切りを意識すべき業務の一覧です。</p>
+            
+            <div class="overflow-x-auto">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="w-24">月</th>
+                            <th class="w-1/3">項目</th>
+                            <th>開催・タスク内容 / 備考</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-bold text-teal-700">4月</td>
+                            <td class="font-bold">定期総会</td>
+                            <td>第1週に開催 <span class="text-rose-600 font-bold">(最重要イベント)</span><br><span class="text-sm text-gray-500">※準備は前年11月から開始</span></td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-teal-700">5月</td>
+                            <td>理事会</td>
+                            <td>公民館の予約（3ヶ月前）など</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-teal-700">6月</td>
+                            <td>理事会 / 運営委員会</td>
+                            <td>会議運営、テーマ設定、案内通知</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-teal-700">7月</td>
+                            <td>ルームアドバイザー連絡会</td>
+                            <td>7/15開催。案内通知、レジュメ作成</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-teal-700">8月</td>
+                            <td>意見交換会準備 / 三大行事準備</td>
+                            <td>高齢者福祉課、社会教育課等への連絡</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-teal-700">9月</td>
+                            <td>理事会 / 掲示板更新</td>
+                            <td>三大行事ポスター掲載（1ヶ月前）</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-teal-700">10月</td>
+                            <td>理事会 / 体育祭</td>
+                            <td>ルームアドバイザー連絡会(10/7)、体育祭</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-teal-700">11月</td>
+                            <td>芸能大会 / 船橋をきれいにする日</td>
+                            <td>第4日曜日開催。次期会長選出準備(11-12月)</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-teal-700">12月</td>
+                            <td>ルームアドバイザー連絡会</td>
+                            <td>12/2開催。</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-teal-700">1月</td>
+                            <td>理事会</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-teal-700">2月</td>
+                            <td>理事会 / 新任理事説明会</td>
+                            <td>2〜3月にかけて実施。案内通知(いけばな封入)</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-teal-700">3月</td>
+                            <td>作品展 / 次年度計画</td>
+                            <td>事業報告・計画策定、総会資料作成・提出</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 2: 定期総会準備 (Rose Theme for Importance) -->
+        <section class="mb-16">
+            <h2 class="journal-font text-2xl font-bold text-slate-800 border-b-2 border-rose-500 pb-2 mb-8 flex items-center">
+                <span class="bg-rose-100 text-rose-800 text-sm py-1 px-3 rounded-full mr-3 font-sans">Section 2</span>
+                最重要イベント：定期総会（4月第1週）の準備タスク
+            </h2>
+            <p class="mb-6 text-slate-600">総会に向けた準備は、<strong class="text-rose-600">前年の11月から</strong>長期的に進めます。</p>
+
+            <div class="overflow-x-auto">
+                <table class="border-t-2 border-rose-200">
+                    <thead>
+                        <tr>
+                            <th class="bg-rose-50 w-24">時期</th>
+                            <th class="bg-rose-50 w-1/3">タスク内容</th>
+                            <th class="bg-rose-50">詳細・備考</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-bold text-slate-700">11月</td>
+                            <td class="font-bold">会場使用予約依頼</td>
+                            <td>高齢者福祉課へ依頼</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-slate-700">2月</td>
+                            <td class="font-bold">来賓案内状作成</td>
+                            <td>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>挨拶予定3名：市長（秘書課）、教育長、市議会議長</li>
+                                    <li>その他来賓：健康福祉局長、高齢者福祉部長、生涯学習部長、高齢者福祉課長、社会教育課長、公益財団法人船橋公園協会市民大学校事業課長</li>
+                                    <li>返信ハガキを封筒に封入して発送</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-slate-700">3月</td>
+                            <td class="font-bold">総会資料作成</td>
+                            <td>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>予算、事業報告、議案書の作成</li>
+                                    <li>高齢者福祉課へ事前提出</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-slate-700">直前</td>
+                            <td class="font-bold">会場設営・備品準備</td>
+                            <td>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>立て看板、ポスターの準備</li>
+                                    <li>講堂設備（吊り看板、演台、マイク）の確認</li>
+                                    <li>受付用品チェックリスト、座席配置図、進行シナリオの用意</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-slate-700">当日</td>
+                            <td class="font-bold">会場運営</td>
+                            <td>
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>司会、議長用進行シナリオに沿った進行</li>
+                                    <li>出席者数チェック</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section 3: 会議・委員会運営 (Blue Theme) -->
+        <section class="mb-16">
+            <h2 class="journal-font text-2xl font-bold text-slate-800 border-b-2 border-blue-500 pb-2 mb-8 flex items-center">
+                <span class="bg-blue-100 text-blue-800 text-sm py-1 px-3 rounded-full mr-3 font-sans">Section 3</span>
+                会議・委員会の運営業務
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="info-card bg-white border border-slate-200 p-6 rounded-lg border-t-4 border-t-blue-400">
+                    <h3 class="font-bold text-lg text-slate-800 mb-3 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        理事会
+                    </h3>
+                    <div class="space-y-3 text-sm">
+                        <p><span class="font-semibold text-slate-600">開催月:</span> 5月、6月、9月、10月、1月、2月</p>
+                        <p class="font-semibold text-slate-600 mb-1">事前準備タスク:</p>
+                        <ul class="list-disc pl-5 space-y-1 text-slate-600">
+                            <li>公民館の予約（3ヶ月前の1日）</li>
+                            <li>講堂使用設備の事前確認（立ち会い含む）</li>
+                            <li>配布資料作成・印刷（理事会レジュメ等）</li>
+                            <li>来賓・表彰等の準備（表彰状、記念品等）</li>
+                        </ul>
+                        <p class="font-semibold text-slate-600 mt-2 mb-1">当日タスク:</p>
+                        <ul class="list-disc pl-5 space-y-1 text-slate-600">
+                            <li>会場設営（名札・出席者チェック）</li>
+                            <li>会議の運営・議事録の作成</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="info-card bg-white border border-slate-200 p-6 rounded-lg border-t-4 border-t-blue-400">
+                    <h3 class="font-bold text-lg text-slate-800 mb-3 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        運営委員会
+                    </h3>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <p><span class="font-semibold">開催日時:</span> 毎月末 金曜日 15:00〜</p>
+                        <p class="font-semibold mt-2">タスク:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>テーマ設定</li>
+                            <li>案内通知（LINE送信含む）</li>
+                            <li>レジュメ作成、議事録作成</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="info-card bg-white border border-slate-200 p-6 rounded-lg border-t-4 border-t-blue-400">
+                    <h3 class="font-bold text-lg text-slate-800 mb-3 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        意見交換会
+                    </h3>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <p><span class="font-semibold text-blue-700">8月開催向け:</span> 市関係者（社会教育課、高齢者福祉課等）への連絡</p>
+                        <p><span class="font-semibold text-blue-700">10月開催向け:</span> 顧問へ実施通知、ハガキ封入</p>
+                        <p><span class="font-semibold">共通タスク:</span> 会場・公民館予約、案内通知、レジュメ作成・印刷等</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="info-card bg-white border border-slate-200 p-6 rounded-lg border-t-4 border-t-blue-400">
+                    <h3 class="font-bold text-lg text-slate-800 mb-3 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        DX推進 / 同好会
+                    </h3>
+                    <div class="space-y-2 text-sm text-slate-600">
+                        <p class="font-semibold text-slate-800">【DX推進】</p>
+                        <p>毎月第1金曜 13:00〜。HP作成・管理（公民館予約・案内通知等）</p>
+                        <p class="font-semibold text-slate-800 mt-3">【同好会実行委員会】</p>
+                        <p>体育祭・芸能大会・作品展に各3名選出。作品展受付3名割当。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: 事務・施設管理 (Amber Theme) -->
+        <section class="mb-16">
+            <h2 class="journal-font text-2xl font-bold text-slate-800 border-b-2 border-amber-500 pb-2 mb-8 flex items-center">
+                <span class="bg-amber-100 text-amber-800 text-sm py-1 px-3 rounded-full mr-3 font-sans">Section 4</span>
+                事務・施設管理・広報業務
+            </h2>
+
+            <div class="space-y-6">
+                <div class="pl-4 border-l-2 border-amber-200">
+                    <h3 class="font-bold text-lg text-amber-800 mb-2">① 施設予約・管理システム</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-slate-600">
+                        <li><strong>船橋市生涯学習施設予約管理システム（公民館予約）:</strong> 3年ごとに更新（本部・総務・広報・会計が関与）</li>
+                        <li><strong>勤労市民センター 予約:</strong> 利用登録更新、抽選申込、随時予約を実施。
+                            <ul class="list-circle pl-5 mt-1 text-sm text-slate-500">
+                                <li>中心施設：利用3ヶ月前の21日 AM9:00 〜 月末23:00</li>
+                                <li>会議室：利用2ヶ月前の1日 〜</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pl-4 border-l-2 border-amber-200">
+                    <h3 class="font-bold text-lg text-amber-800 mb-2">② 広報・掲示板対応</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-slate-600">
+                        <li><strong>市民力発見サイト:</strong> 三大行事の案内、ポスター、チラシのアップロード。3月に活動報告・計画をアップロード。</li>
+                        <li><strong>みんなの掲示板へのポスター掲示:</strong>
+                            <ul class="list-circle pl-5 mt-1 text-sm text-slate-500">
+                                <li>三大行事ポスターを掲載（開催1ヶ月前の9月・10月・2月）。</li>
+                                <li>都市計画課・景観係への利用申請が必要。</li>
+                                <li>市内16箇所分、ポスター（規格60cm×45cm）製作、保護カバー付。</li>
+                                <li>※掲載・配布は文化部と連携して行う。</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pl-4 border-l-2 border-amber-200">
+                    <h3 class="font-bold text-lg text-amber-800 mb-2">③ 福祉バス利用事務</h3>
+                    <ul class="list-none space-y-2 text-slate-600">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> 借上料補助金交付申請（地域福祉課へ提出）</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> 借上料実績報告書（地域福祉課へ提出）</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: その他業務 (Purple Theme) -->
+        <section>
+            <h2 class="journal-font text-2xl font-bold text-slate-800 border-b-2 border-purple-500 pb-2 mb-8 flex items-center">
+                <span class="bg-purple-100 text-purple-800 text-sm py-1 px-3 rounded-full mr-3 font-sans">Section 5</span>
+                その他 随時業務・サポート
+            </h2>
+            <p class="mb-6 text-slate-600">日々の業務や、時期に合わせて適宜対応する業務です。</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-sm text-slate-700">
+                <div class="bg-purple-50 p-4 rounded-md">
+                    <h4 class="font-bold text-purple-900 mb-1">名簿の作成・管理</h4>
+                    <ul class="list-disc pl-4 text-purple-800/80">
+                        <li>デジタル会員名簿の作成</li>
+                        <li>理事名簿・顧問名簿の作成と更新</li>
+                    </ul>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-md">
+                    <h4 class="font-bold text-purple-900 mb-1">新任理事への対応</h4>
+                    <ul class="list-disc pl-4 text-purple-800/80">
+                        <li>説明会の実施（3月）</li>
+                        <li>新任理事用名札（ホルダー付）の作成</li>
+                    </ul>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-md">
+                    <h4 class="font-bold text-purple-900 mb-1">出前講座の企画・運営</h4>
+                    <ul class="list-disc pl-4 text-purple-800/80">
+                        <li>公民館・施設への申請、講師派遣依頼</li>
+                        <li>当日の会場設営、受付、アンケート集計</li>
+                    </ul>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-md">
+                    <h4 class="font-bold text-purple-900 mb-1">市民活動サポートセンター関連</h4>
+                    <ul class="list-disc pl-4 text-purple-800/80">
+                        <li>利用登録団体のロッカー貸出更新手続き（3月）</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-6 p-4 border border-purple-200 rounded-md bg-white text-sm">
+                <strong class="text-purple-800">総務部 懇親企画:</strong> パークゴルフ、ハイキング、各種施設（博物館・美術館等）の見学・利用などの企画運営。
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
