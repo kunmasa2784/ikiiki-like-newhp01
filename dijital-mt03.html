@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第3回合同デジタル担当者会議 議事録</title>
+  
+  <!-- Webフォントの読み込み（明朝体とゴシック体） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* 変数の定義 */
+    :root {
+      --primary-color: #1a5b7f;      /* 深いブルー：信頼感と学術感 */
+      --secondary-color: #d96c4a;    /* テラコッタ：少しカラフルなアクセント */
+      --bg-color: #f4f6f8;           /* 背景：目に優しいオフホワイト */
+      --paper-bg: #ffffff;           /* 用紙部分の背景色 */
+      --text-main: #333333;          /* 本文の文字色 */
+      --text-muted: #666666;         /* 補足テキストの文字色 */
+      --border-color: #e2e8f0;       /* 境界線の色 */
+    }
+
+    /* 全体設定 */
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: 'Noto Sans JP', sans-serif;
+      line-height: 1.85; /* 文章が読みやすいように行間を少し広めに */
+      padding: 3rem 1rem;
+      margin: 0;
+    }
+
+    /* 文書のコンテナ（紙面を模したデザイン） */
+    .journal-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background-color: var(--paper-bg);
+      padding: 4rem 5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border-top: 8px solid var(--primary-color);
+      border-radius: 4px;
+    }
+
+    /* 見出し設定（明朝体で洗練された印象に） */
+    h1, h2, h3 {
+      font-family: 'Noto Serif JP', serif;
+      color: var(--primary-color);
+    }
+
+    /* タイトル */
+    .paper-title {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      letter-spacing: 0.05em;
+    }
+
+    /* セクション */
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    /* 大見出し */
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 1.6rem;
+      background-color: var(--secondary-color);
+      margin-right: 1rem;
+      border-radius: 2px;
+    }
+
+    /* 中見出し */
+    .subsection-title {
+      font-size: 1.25rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+      border-bottom: 1px dashed var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+
+    /* 段落（文章ベースの設定） */
+    p {
+      margin-bottom: 1.5rem;
+      text-align: justify;
+      text-indent: 1em; /* 段落の字下げを追加して文章らしく */
+    }
+
+    /* 概要ブロック */
+    .summary-block {
+      padding: 1.5rem;
+      background-color: #f8fafc;
+      border-left: 4px solid var(--primary-color);
+      border-radius: 0 4px 4px 0;
+      margin-bottom: 2.5rem;
+    }
+    
+    .summary-block p {
+      margin-bottom: 0;
+      text-indent: 0;
+    }
+
+    /* 強調テキスト */
+    strong {
+      color: var(--primary-color);
+    }
+
+    /* レスポンシブ対応（スマホ閲覧時） */
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem 0.5rem;
+      }
+      .journal-container {
+        padding: 2rem 1.5rem;
+      }
+      .paper-title {
+        font-size: 1.6rem;
+      }
+      .section-title {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="journal-container">
+    <h1 class="paper-title">第3回合同デジタル担当者会議 議事録</h1>
+
+    <div class="summary-block">
+      <p><strong>開催概要：</strong> 本会議は、2026年5月8日（金）13:00より、宮本公民館の第1集会室にて開催された。</p>
+    </div>
+
+    <section class="section">
+      <h2 class="section-title">1. 会議の目的と経緯の共有</h2>
+      <p>本会議の冒頭では、新しく参加したメンバーに向けて、これまでのデジタル担当者会議における取り組みの経緯が説明された。具体的には、ホームページ（HP）の立ち上げから始まり、メンバーのWordPressスキルの向上、およびHPコンテンツの充実化を図ってきたプロセスが共有された。また、これらの取り組みについて理事会でどのように説明を行い、承認を得てきたかについても確認がなされた。</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">2. デジタル化による活性化戦略</h2>
+      <p>組織の課題解決と今後の持続的な発展に向けて、「デジタル化による活性化戦略」として5つの主要な方針が確認された。</p>
+      
+      <p>第一に、<strong>会員減少への危機感の共有</strong>である。現在の会員数が2,000名から600名台まで大幅に減少している現状が報告された。この減少の主な原因は、活動のマンネリ化や紙を中心とした古い運営体制による「会員同士のつながりの弱まり」にあると分析された。</p>
+      
+      <p>第二に、<strong>デジタル化による“つながり”の強化</strong>が提案された。課題解決に向け、ホームページやLINEを積極的に活用することで活動の楽しさを広く共有する方針が示された。双方向のコミュニケーションを促進し、オンラインでも交流可能な場を設けることで、会員の参加意欲を効果的に高めていく。</p>
+      
+      <p>第三に、<strong>誰も取り残さない支援</strong>の重要性が強調された。デジタル機器の操作が苦手な会員であっても安心して参加できるよう、スマホ教室の開催や会員同士の「教え合い」の文化を推進し、適切なサポート環境を整備していく。</p>
+      
+      <p>第四に、<strong>運営の効率化と“攻め”の組織への転換</strong>である。名簿の管理やイベントの申し込み手続きなどをデジタル化することで、役員の事務負担を大幅に軽減する。これにより、理事会を単なる「事務処理の場」から、新たなアイデアを生み出す「企画・共創の場」へと変革していくことが確認された。</p>
+      
+      <p>第五に、<strong>地域に開かれた持続可能な同窓会</strong>の構築を目指す。作品展やeスポーツ大会、スマホ教室などのイベントを地域住民にも開放することで交流の輪を広げ、会員一人ひとりがコミュニティの中で「役割」と「生きがい」を感じられる組織づくりを推進する。</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">3. 各種プロジェクトの進捗確認・討議</h2>
+      <p>続いて、現在進行中の各種プロジェクトについて進捗確認および討議が行われた。まず、第1回いきいき運営委員会に関する内容など、第2回会議の議事内容が振り返られた。次に、会員名簿の作成状況に関する報告があり、現状の進捗と今後の課題に対する対応策が協議された。</p>
+      <p>また、各部におけるデータ管理の状況や、コミュニケーションツールの導入・活用状況、そしてデジタルデバイド（情報格差）解消に向けた具体的な施策の進捗についても、各担当者から報告が行われた。最後に、ホームページの運営やコンテンツ作成をより効率化するため、WordPressと生成AI（Gemini）を組み合わせた活用方法について情報が共有された。</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">4. その他連絡事項および次回予定</h2>
+      <p>会議の結びに、今後のスケジュールや連絡事項が共有された。新メンバーを対象としたWordPress講習会は、谷合先生を講師として、5月26日（火）より開始される予定である。本講習は4〜5回のシリーズとして企画されており、約2〜3ヶ月間かけて実施される。</p>
+      <p>また、新メンバーがこの講習を修了するまでの期間、本デジタル担当者会議は、2か月毎のペースで開催されることが決定した。なお、次回の全体会議は2026年7月10日（金）に開催される予定である。</p>
+    </section>
+
+  </div>
+
+</body>
+</html>
