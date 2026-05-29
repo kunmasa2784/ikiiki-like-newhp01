@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第2回いきいき運営委員会 議事録</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts (Noto Serif JP & Noto Sans JP) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #fcfbfa;
+      color: #2c3e35;
+    }
+    .serif-title {
+      font-family: 'Noto Serif JP', serif;
+    }
+    /* カスタムスクロールバー */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0f5156;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+
+  <!-- 最大幅を4xlから5xlへ少し広げ、大きな文字でもバランスが取れるように変更 -->
+  <div class="max-w-5xl mx-auto bg-white shadow-md border border-stone-200 rounded-2xl overflow-hidden">
+    
+    <!-- ジャーナル風トップ帯 -->
+    <div class="h-3 bg-gradient-to-r from-emerald-800 via-teal-700 to-amber-600"></div>
+
+    <div class="p-6 sm:p-12 lg:p-16">
+      
+      <!-- 会議タイトル & メタ情報 -->
+      <div class="text-center pb-10 border-b border-stone-200">
+        <p class="text-sm uppercase tracking-widest font-bold text-amber-600 mb-3">Committee Meeting Minutes</p>
+        <h1 class="serif-title text-3xl sm:text-4xl lg:text-5xl font-extrabold text-teal-950 leading-tight">
+          第2回いきいき運営委員会 議事録
+        </h1>
+        
+        <!-- 基本情報カード（文字サイズを拡大） -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-left bg-stone-50 p-6 rounded-xl border border-stone-100">
+          <div class="flex items-center space-x-4">
+            <div class="p-3 bg-teal-100/50 rounded-lg text-teal-800">
+              <i data-lucide="calendar" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <p class="text-xs text-stone-500 font-semibold uppercase tracking-wider">日時</p>
+              <p class="text-base font-bold text-stone-800">2026年5月29日（金） 15:00〜</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <div class="p-3 bg-teal-100/50 rounded-lg text-teal-800">
+              <i data-lucide="map-pin" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <p class="text-xs text-stone-500 font-semibold uppercase tracking-wider">場所</p>
+              <p class="text-base font-bold text-stone-800">海神公民館</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <div class="p-3 bg-teal-100/50 rounded-lg text-teal-800">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <p class="text-xs text-stone-500 font-semibold uppercase tracking-wider">出席者</p>
+              <p class="text-base font-bold text-stone-800">運営委員会メンバー 一同</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 目次（文字サイズを拡大） -->
+      <div class="my-10 p-6 bg-teal-50/30 rounded-xl border border-teal-100/50">
+        <h2 class="text-sm font-bold text-teal-900 tracking-wider uppercase mb-4 flex items-center gap-2">
+          <i data-lucide="list" class="w-5 h-5"></i> 目次 / 議題一覧
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-sm sm:text-base text-teal-950 font-medium">
+          <li><a href="#section-1" class="hover:text-amber-600 transition-colors flex items-center gap-1.5"><span>I.</span> 組織改革と役割分担の再確認</a></li>
+          <li><a href="#section-2" class="hover:text-amber-600 transition-colors flex items-center gap-1.5"><span>II.</span> 修了生ガイドブックの編集・スケジュール</a></li>
+          <li><a href="#section-3" class="hover:text-amber-600 transition-colors flex items-center gap-1.5"><span>III.</span> ルームアドバイザー（RA）との連携強化</a></li>
+          <li><a href="#section-4" class="hover:text-amber-600 transition-colors flex items-center gap-1.5"><span>IV.</span> 新規事業・同好会立ち上げのルール化</a></li>
+          <li><a href="#section-5" class="hover:text-amber-600 transition-colors flex items-center gap-1.5"><span>V.</span> 財政健全化ケーススタディと助成金改革</a></li>
+          <li><a href="#section-6" class="hover:text-amber-600 transition-colors flex items-center gap-1.5"><span>VI.</span> 同窓会の魅力向上と今後の展望</a></li>
+        </ul>
+      </div>
+
+      <!-- メインコンテンツ -->
+      <div class="space-y-16 mt-12">
+
+        <!-- I. 組織改革と役割分担の再確認 -->
+        <section id="section-1" class="scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-teal-800/80 pb-3 mb-8">
+            <span class="serif-title text-2xl font-bold bg-teal-900 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0">I</span>
+            <h2 class="serif-title text-xl sm:text-2xl font-bold text-teal-950">組織改革と役割分担の再確認</h2>
+          </div>
+          
+          <div class="bg-amber-50/40 border-l-4 border-amber-500 p-5 mb-8 rounded-r-xl">
+            <p class="text-base font-bold text-amber-900 flex items-center gap-2">
+              <i data-lucide="zap" class="w-5 h-5 text-amber-600"></i>基本方針
+            </p>
+            <p class="text-base text-stone-700 mt-2 leading-relaxed">
+              単なる話し合いの場にとどめず、<strong class="text-teal-950">「決定事項を実行に移す」</strong>実効性の高い組織づくりを目指す。
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-stone-50 p-6 rounded-xl border border-stone-200 flex flex-col justify-between">
+              <div>
+                <h3 class="text-base font-bold text-teal-900 mb-3 flex items-center gap-2">
+                  <span class="w-2 h-4 bg-teal-700 rounded-full inline-block"></span> 運営委員会の位置付け
+                </h3>
+                <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+                  実行力のある組織として再定義。意思決定から実行にいたるまでのスピード感を最重要視します。
+                </p>
+              </div>
+            </div>
+            
+            <div class="bg-stone-50 p-6 rounded-xl border border-stone-200 flex flex-col justify-between">
+              <div>
+                <h3 class="text-base font-bold text-teal-900 mb-3 flex items-center gap-2">
+                  <span class="w-2 h-4 bg-teal-700 rounded-full inline-block"></span> 同好会推進部の再編
+                </h3>
+                <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+                  1つの部署への過剰な負荷を是正。新規立ち上げ等は<strong class="text-stone-800">運営委員会直轄</strong>とし、推進部は「各同好会との活動状況収集・ニーズ吸い上げ等のコミュニケーション」に専念します。
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-stone-50 p-6 rounded-xl border border-stone-200 flex flex-col justify-between">
+              <div>
+                <h3 class="text-base font-bold text-teal-900 mb-3 flex items-center gap-2">
+                  <span class="w-2 h-4 bg-teal-700 rounded-full inline-block"></span> 助成金の管理移管
+                </h3>
+                <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+                  これまでのセレモニー的な運用を改め、<strong class="text-stone-800">会計部が一元管理</strong>を行います。また、各同好会の活動実態をHP等で会員へ広く周知する活動を強化します。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- II. 「修了生ガイドブック」の編集方針とスケジュール -->
+        <section id="section-2" class="scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-teal-800/80 pb-3 mb-8">
+            <span class="serif-title text-2xl font-bold bg-teal-900 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0">II</span>
+            <h2 class="serif-title text-xl sm:text-2xl font-bold text-teal-950">「修了生ガイドブック」の編集方針とスケジュール</h2>
+          </div>
+
+          <p class="text-base sm:text-lg text-stone-600 mb-8 leading-relaxed">
+            同窓会の魅力を十分に伝え、新入生の入会を協力に促す重要なツールとして、制作内容および配布タイミングの抜本的な見直しを行います。
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="border border-stone-200 rounded-xl p-6 bg-white">
+              <h3 class="text-base font-bold text-teal-950 mb-4 flex items-center gap-2">
+                <i data-lucide="edit-3" class="w-5 h-5 text-teal-700"></i>編集の目的と改善点
+              </h3>
+              <ul class="space-y-3.5 text-sm sm:text-base text-stone-600 leading-relaxed">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-amber-600 mt-1">■</span>
+                  <span>毎年発行しているものの、同窓会の説明が不十分であった点を徹底改善。</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-amber-600 mt-1">■</span>
+                  <span>在校生が「同窓会に入ると素晴らしい未来が待っている」と直感できるよう、魅力的なレイアウトや紹介文（特に同好会紹介）へ一新。</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="border border-stone-200 rounded-xl p-6 bg-white">
+              <h3 class="text-base font-bold text-teal-950 mb-4 flex items-center gap-2">
+                <i data-lucide="calendar-range" class="w-5 h-5 text-teal-700"></i>配布時期の見直し
+              </h3>
+              <div class="bg-stone-50 p-4 rounded-lg border border-stone-100 text-sm sm:text-base text-stone-600 leading-relaxed">
+                <p class="font-bold text-stone-800 mb-2">【変更の理由】</p>
+                <p class="mb-3">4月の入学時は新入生自身も状況把握が難しく、配布効果が薄いと判断。</p>
+                <p class="font-bold text-stone-800 mb-1">【新方針】</p>
+                <p>卒業を意識し始める<strong class="text-teal-900">9月〜12月頃</strong>に重点を置き、配布と説明を集中的に行う方向で調整。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- スケジュール（タイムライン風） -->
+          <div>
+            <h3 class="text-base font-bold text-teal-950 mb-6 flex items-center gap-2">
+              <i data-lucide="clock" class="w-5 h-5 text-teal-700"></i> 制作・発行スケジュール
+            </h3>
+            <div class="relative pl-8 border-l-2 border-teal-100 space-y-6 ml-4">
+              <!-- 6/26 -->
+              <div class="relative">
+                <div class="absolute -left-[39px] top-1.5 w-4 h-4 rounded-full bg-teal-800 border-4 border-white"></div>
+                <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <span class="text-sm font-bold text-teal-900 bg-teal-50 px-3 py-1.5 rounded w-fit">6月26日</span>
+                  <span class="text-sm sm:text-base text-stone-700 font-semibold">原稿案の提示</span>
+                </div>
+              </div>
+              <!-- 7月中 -->
+              <div class="relative">
+                <div class="absolute -left-[39px] top-1.5 w-4 h-4 rounded-full bg-teal-800 border-4 border-white"></div>
+                <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <span class="text-sm font-bold text-teal-900 bg-teal-50 px-3 py-1.5 rounded w-fit">7月中</span>
+                  <span class="text-sm sm:text-base text-stone-700 font-semibold">原稿データ納期</span>
+                </div>
+              </div>
+              <!-- 10/10 -->
+              <div class="relative">
+                <div class="absolute -left-[39px] top-1.5 w-4 h-4 rounded-full bg-teal-800 border-4 border-white"></div>
+                <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <span class="text-sm font-bold text-teal-900 bg-teal-50 px-3 py-1.5 rounded w-fit">10月10日</span>
+                  <span class="text-sm sm:text-base text-stone-700 font-semibold">同好会記載データの締め切り</span>
+                </div>
+              </div>
+              <!-- 10/23 -->
+              <div class="relative">
+                <div class="absolute -left-[39px] top-1.5 w-4 h-4 rounded-full bg-teal-800 border-4 border-white"></div>
+                <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <span class="text-sm font-bold text-teal-900 bg-teal-50 px-3 py-1.5 rounded w-fit">10月23日</span>
+                  <span class="text-sm sm:text-base text-stone-700 font-semibold">高齢者福祉課へ印刷原稿を提出 （※紙ベース）</span>
+                </div>
+              </div>
+              <!-- 11/27 -->
+              <div class="relative">
+                <div class="absolute -left-[39px] top-1.5 w-4 h-4 rounded-full bg-teal-800 border-4 border-white"></div>
+                <div class="bg-stone-50 p-4 rounded-xl border border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <span class="text-sm font-bold text-teal-900 bg-teal-50 px-3 py-1.5 rounded w-fit">11月27日</span>
+                  <span class="text-sm sm:text-base text-stone-700 font-semibold">納品</span>
+                </div>
+              </div>
+              <!-- 12/2 -->
+              <div class="relative">
+                <div class="absolute -left-[39px] top-2 w-4 h-4 rounded-full bg-amber-600 border-4 border-white"></div>
+                <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <span class="text-sm font-bold text-amber-900 bg-amber-100 px-3 py-1.5 rounded w-fit flex items-center gap-1.5">
+                    <i data-lucide="flag" class="w-4 h-4"></i> 12月2日 (目標)
+                  </span>
+                  <span class="text-sm sm:text-base text-stone-800 font-bold">学級長連絡会での配布</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- III. ルームアドバイザー（RA）との連携強化 -->
+        <section id="section-3" class="scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-teal-800/80 pb-3 mb-8">
+            <span class="serif-title text-2xl font-bold bg-teal-900 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0">III</span>
+            <h2 class="serif-title text-xl sm:text-2xl font-bold text-teal-950">ルームアドバイザー（RA）との連携強化</h2>
+          </div>
+
+          <p class="text-base sm:text-lg text-stone-600 mb-8 leading-relaxed">
+            同窓会運営における重要課題として、RA（ルームアドバイザー）との関係性を再構築し、互いの役割と期待をクリアに定義します。
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <!-- RA情報交換会 -->
+            <div class="bg-stone-50 border border-stone-200 p-6 rounded-xl flex flex-col justify-between">
+              <div>
+                <span class="text-xs tracking-wider text-amber-700 font-bold bg-amber-50 px-2.5 py-1 rounded">直近の重要イベント</span>
+                <h3 class="text-base font-bold text-teal-950 mt-4 mb-3 flex items-center gap-2">
+                  <i data-lucide="speech" class="w-5 h-5 text-teal-700"></i> RA情報交換会の開催
+                </h3>
+                <div class="text-sm sm:text-base text-stone-600 space-y-3 leading-relaxed">
+                  <p><strong>【日時・場所】</strong><br>6月24日（水）15:45〜 ／ 勤労市民センター 第1講習室</p>
+                  <p><strong>【目的】</strong><br>新体制の方針共有、およびRAを通じた同窓会への入会協力要請。</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 権限と責任 -->
+            <div class="bg-stone-50 border border-stone-200 p-6 rounded-xl flex flex-col justify-between">
+              <div>
+                <span class="text-xs tracking-wider text-teal-700 font-bold bg-teal-50 px-2.5 py-1 rounded">役割の厳格化</span>
+                <h3 class="text-base font-bold text-teal-950 mt-4 mb-3 flex items-center gap-2">
+                  <i data-lucide="shield-alert" class="w-5 h-5 text-teal-700"></i> 権限と責任の明確化
+                </h3>
+                <ul class="text-sm sm:text-base text-stone-600 space-y-2.5 list-disc pl-5 leading-relaxed">
+                  <li>同窓会がRAの推薦権（実質的な決定権）を保有していることを再認識。</li>
+                  <li>RAとして謝礼が発生している事実を踏まえ、同窓会への入会協力などの「任務」を果たすよう正式に依頼。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- フラットサロン形式 -->
+          <div class="bg-teal-50/50 border border-teal-200/60 p-6 rounded-xl flex items-start gap-4">
+            <div class="p-3 bg-white rounded-full text-teal-800 shadow-sm shrink-0">
+              <i data-lucide="coffee" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="text-base font-bold text-teal-950">会議の演出：フラットサロン形式の導入</h4>
+              <p class="text-sm sm:text-base text-stone-600 mt-2 leading-relaxed">
+                対立構造を注意深く避け、「リラックスした雰囲気」を保ちつつも、同窓会として伝えるべき重要事項は曖昧にせず明確に伝える演出を行います。
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- IV. 新規事業・同好会立ち上げのルール化 -->
+        <section id="section-4" class="scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-teal-800/80 pb-3 mb-8">
+            <span class="serif-title text-2xl font-bold bg-teal-900 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0">IV</span>
+            <h2 class="serif-title text-xl sm:text-2xl font-bold text-teal-950">新規事業・同好会立ち上げのルール化</h2>
+          </div>
+
+          <p class="text-base sm:text-lg text-stone-600 mb-8 leading-relaxed">
+            アイデアを公平かつ円滑に形にするため、ブラックボックス化を排し、透明性の高い明確なルール（マニュアル案）を策定します。
+          </p>
+
+          <!-- 立ち上げプロセス -->
+          <div class="mb-10">
+            <h3 class="text-base font-bold text-teal-950 mb-5 flex items-center gap-2">
+              <i data-lucide="git-branch" class="w-5 h-5 text-teal-700"></i> 申請・承認プロセス
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
+              <!-- Step 1 -->
+              <div class="bg-stone-50 p-5 rounded-xl border border-stone-200 relative">
+                <span class="absolute top-3 right-3 text-xs font-bold text-stone-400 bg-stone-200/50 px-2 py-0.5 rounded-full">01</span>
+                <p class="text-sm font-bold text-teal-950 mb-2">アイデア提出</p>
+                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">提案者が事務局へ申請書を提出。</p>
+              </div>
+              <!-- Step 2 -->
+              <div class="bg-stone-50 p-5 rounded-xl border border-stone-200 relative">
+                <span class="absolute top-3 right-3 text-xs font-bold text-stone-400 bg-stone-200/50 px-2 py-0.5 rounded-full">02</span>
+                <p class="text-sm font-bold text-teal-950 mb-2">事前確認</p>
+                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">総務部が会則、予算、安全面の初期チェックを実施。</p>
+              </div>
+              <!-- Step 3 -->
+              <div class="bg-stone-50 p-5 rounded-xl border border-stone-200 relative">
+                <span class="absolute top-3 right-3 text-xs font-bold text-stone-400 bg-stone-200/50 px-2 py-0.5 rounded-full">03</span>
+                <p class="text-sm font-bold text-teal-950 mb-2">委員会協議</p>
+                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">運営委員会にて「楽しさ」「無理がないか」を議論。</p>
+              </div>
+              <!-- Step 4 -->
+              <div class="bg-amber-50 p-5 rounded-xl border border-amber-200 relative">
+                <span class="absolute top-3 right-3 text-xs font-bold text-amber-500 bg-amber-100/50 px-2 py-0.5 rounded-full">04</span>
+                <p class="text-sm font-bold text-amber-950 mb-2">最終決定</p>
+                <p class="text-xs sm:text-sm text-stone-700 leading-relaxed">運営委員会での合意をもって正式に承認。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3大チェックポイント & ドキュメント -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="border border-stone-200 rounded-xl p-6 bg-white">
+              <h3 class="text-base font-bold text-teal-950 mb-4 flex items-center gap-2">
+                <i data-lucide="check-square" class="w-5 h-5 text-teal-700"></i> 審査における3大チェックポイント
+              </h3>
+              <ul class="space-y-4 text-sm sm:text-base">
+                <li class="flex gap-3">
+                  <span class="font-bold text-teal-900 bg-teal-100 w-6 h-6 rounded-full flex items-center justify-center shrink-0">1</span>
+                  <div>
+                    <p class="font-bold text-stone-800">多くの会員が楽しめるか</p>
+                    <p class="text-stone-500 text-xs sm:text-sm mt-1">一部の人間だけに閉じず、開かれた活動であるかを審査。</p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <span class="font-bold text-teal-900 bg-teal-100 w-6 h-6 rounded-full flex items-center justify-center shrink-0">2</span>
+                  <div>
+                    <p class="font-bold text-stone-800">提案者一人に負担が集中しないか</p>
+                    <p class="text-stone-500 text-xs sm:text-sm mt-1">持続可能性の観点から、運営体制が組織化されているかを確認。</p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <span class="font-bold text-teal-900 bg-teal-100 w-6 h-6 rounded-full flex items-center justify-center shrink-0">3</span>
+                  <div>
+                    <p class="font-bold text-stone-800">予算および安全面は担保されているか</p>
+                    <p class="text-stone-500 text-xs sm:text-sm mt-1">トラブルを未然に回避する計画があるかを厳重にチェック。</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- ドキュメント管理 -->
+            <div class="bg-stone-50 border border-stone-200 rounded-xl p-6 flex flex-col justify-between">
+              <div>
+                <h3 class="text-base font-bold text-teal-950 mb-3 flex items-center gap-2">
+                  <i data-lucide="hard-drive" class="w-5 h-5 text-teal-700"></i> ドキュメントの一元管理
+                </h3>
+                <p class="text-sm sm:text-base text-stone-600 leading-relaxed mb-4">
+                  承認された記録や実際の申請書は、すべて同窓会専用の<strong>Google ドライブ</strong>にてクラウド保存します。各部長へ適切なアクセス権限を付与し、いつでも確認可能な状態を担保します。
+                </p>
+              </div>
+              <div class="bg-white p-4 rounded-lg border border-stone-200 flex items-center gap-4">
+                <div class="p-3 bg-blue-100 rounded-lg text-blue-600 shrink-0">
+                  <i data-lucide="folder-open" class="w-6 h-6"></i>
+                </div>
+                <div class="text-xs sm:text-sm">
+                  <p class="font-bold text-stone-800">Shared Drive</p>
+                  <p class="text-stone-500">運営委員会共有フォルダ／申請書アーカイブ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- V. 財政健全化に向けたケーススタディと助成金改革 -->
+        <section id="section-5" class="scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-teal-800/80 pb-3 mb-8">
+            <span class="serif-title text-2xl font-bold bg-teal-900 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0">V</span>
+            <h2 class="serif-title text-xl sm:text-2xl font-bold text-teal-950">財政健全化に向けたケーススタディと助成金改革</h2>
+          </div>
+
+          <!-- 財政アラート -->
+          <div class="bg-rose-50 border border-rose-200 p-5 rounded-xl mb-8 flex items-start gap-4">
+            <div class="p-3 bg-rose-100 rounded-full text-rose-700 shrink-0">
+              <i data-lucide="trending-down" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h4 class="text-base font-bold text-rose-950">【警告】2027年度（令和9年度）の財政シミュレーション</h4>
+              <p class="text-sm sm:text-base text-stone-700 mt-2 leading-relaxed">
+                会員数の減少（目標610名に対し実績570名程度）および積み立て金の枯渇が迫っています。このまま現状維持を続けた場合、<strong class="text-rose-950">約40万円の予算不足</strong>に陥る試算が示されました。支出削減と新たな収入源の獲得が急務です。
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-8">
+            
+            <!-- 支出削減具体策 -->
+            <div class="border border-stone-200 rounded-xl p-6">
+              <h3 class="text-base font-bold text-teal-950 mb-4 flex items-center gap-2">
+                <i data-lucide="scissors" class="w-5 h-5 text-rose-700"></i> 支出削減案の徹底（具体策）
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-stone-50 p-4 rounded-lg border border-stone-100">
+                  <p class="text-sm sm:text-base font-bold text-stone-800 mb-2">① 旅費交通費の廃止</p>
+                  <p class="text-xs sm:text-sm text-stone-500 leading-relaxed">理事の旅費交通費（上限1,000円）を一律廃止します。</p>
+                </div>
+                <div class="bg-stone-50 p-4 rounded-lg border border-stone-100">
+                  <p class="text-sm sm:text-base font-bold text-stone-800 mb-2">② 広報紙の郵送削減</p>
+                  <p class="text-xs sm:text-sm text-stone-500 leading-relaxed">原則手渡し、またはデジタル配信へ移行し、郵送費を大幅削減。</p>
+                </div>
+                <div class="bg-stone-50 p-4 rounded-lg border border-stone-100">
+                  <p class="text-sm sm:text-base font-bold text-stone-800 mb-2">③ 3大行事の見直し</p>
+                  <p class="text-xs sm:text-sm text-stone-500 leading-relaxed">体育祭、芸能大会、作品展の規模縮小、会場変更、日程短縮を検討。</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 助成金制度見直し -->
+            <div class="border border-stone-200 rounded-xl p-6">
+              <h3 class="text-base font-bold text-teal-950 mb-4 flex items-center gap-2">
+                <i data-lucide="scale" class="w-5 h-5 text-teal-700"></i> 助成金（同好会・競技大会）制度の見直し
+              </h3>
+              <div class="bg-amber-50/20 border border-amber-200/60 p-5 rounded-lg">
+                <p class="text-sm sm:text-base text-stone-700 leading-relaxed">
+                  誰もが納得できる公平かつ明確な算出ルールを再構築します。
+                  これに伴い、<strong>「活動実態のない同好会」</strong>や<strong>「会員名簿を提出できない同好会」</strong>への助成金は、厳格に制限対象とします。
+                </p>
+              </div>
+            </div>
+
+            <!-- 収入増加策 -->
+            <div class="border border-stone-200 rounded-xl p-6">
+              <h3 class="text-base font-bold text-teal-950 mb-4 flex items-center gap-2">
+                <i data-lucide="circle-dollar-sign" class="w-5 h-5 text-emerald-700"></i> 収入増加策の検討
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-stone-50 p-5 rounded-xl text-sm sm:text-base space-y-3">
+                  <p class="font-bold text-teal-950 border-b pb-2">基盤の強化</p>
+                  <ul class="space-y-2 text-stone-600 pl-5 list-disc leading-relaxed">
+                    <li>会費の適正な値上げ</li>
+                    <li>賛助会員（他学部修了生や一般市民）の受け入れ拡大</li>
+                  </ul>
+                </div>
+                <div class="bg-stone-50 p-5 rounded-xl text-sm sm:text-base space-y-3">
+                  <p class="font-bold text-teal-950 border-b pb-2">新規「事業収入」の創出</p>
+                  <ul class="space-y-2 text-stone-600 pl-5 list-disc leading-relaxed">
+                    <li>日帰りバス旅行等の企画・事業化（参加費獲得）</li>
+                    <li>ＰＣ/ＡＩ講座の一般開放（参加費獲得）</li>
+                    <li>各種大会での参加費サポーターの仕組み研究</li>
+                    <li>広報紙における広告枠の設置および収入スキームの構築</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-5 bg-teal-50/40 p-4 rounded-xl border border-teal-100 flex items-center gap-3">
+                <i data-lucide="heart-handshake" class="w-5 h-5 text-teal-700 shrink-0"></i>
+                <p class="text-sm text-teal-900 leading-relaxed">
+                  <strong>【寄付金の要請】</strong> 顧問等に対し、財政安定のための自主寄付の可能性を慎重に打診・模索します。
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- VI. 同窓会の魅力向上と今後の展望 -->
+        <section id="section-6" class="scroll-mt-6">
+          <div class="flex items-center gap-3 border-b-2 border-teal-800/80 pb-3 mb-8">
+            <span class="serif-title text-2xl font-bold bg-teal-900 text-white w-10 h-10 rounded-full flex items-center justify-center shrink-0">VI</span>
+            <h2 class="serif-title text-xl sm:text-2xl font-bold text-teal-950">同窓会の魅力向上と今後の展望</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- 3本の柱 -->
+            <div class="bg-stone-50 border border-stone-200 p-6 rounded-xl flex flex-col justify-between">
+              <div>
+                <span class="text-xs tracking-wider text-teal-700 font-bold bg-teal-50 px-2.5 py-1 rounded">最優先注力分野</span>
+                <h3 class="text-base sm:text-lg font-bold text-teal-950 mt-4 mb-3">3本の柱（重点テーマ）の推進</h3>
+                <p class="text-sm sm:text-base text-stone-600 leading-relaxed mb-6">
+                  以下の3領域を魅力化の「フック」として集中的に推進。入会するメリットを対外的にわかりやすく可視化します。
+                </p>
+              </div>
+              
+              <div class="grid grid-cols-3 gap-3 text-center text-xs sm:text-sm font-bold">
+                <div class="bg-white p-3 rounded-lg border border-stone-200 text-teal-950 shadow-sm">
+                  <p class="text-2xl">💻</p>
+                  <p class="mt-2 leading-snug">パソコン<br>(ITスキル)</p>
+                </div>
+                <div class="bg-white p-3 rounded-lg border border-stone-200 text-teal-950 shadow-sm">
+                  <p class="text-2xl">🀄</p>
+                  <p class="mt-2 leading-snug">健康/<br>麻雀</p>
+                </div>
+                <div class="bg-white p-3 rounded-lg border border-stone-200 text-teal-950 shadow-sm">
+                  <p class="text-2xl">🚌</p>
+                  <p class="mt-2 leading-snug">旅行・<br>体験型イベント</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 備品管理 -->
+            <div class="bg-stone-50 border border-stone-200 p-6 rounded-xl flex flex-col justify-between">
+              <div>
+                <span class="text-xs tracking-wider text-amber-700 font-bold bg-amber-50 px-2.5 py-1 rounded">効率的なアセット管理</span>
+                <h3 class="text-base sm:text-lg font-bold text-teal-950 mt-4 mb-3">備品管理 of トランクルーム検討</h3>
+                <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+                  現在、個人の自宅等に分散保管されてしまっている同窓会の大切な備品を一手に集約するため、トランクルームの契約を本格検討中。
+                </p>
+              </div>
+              
+              <div class="bg-amber-50/50 p-4 rounded-lg border border-amber-200/60 mt-6 text-xs sm:text-sm text-stone-700 space-y-1.5">
+                <p class="font-bold flex items-center gap-1.5 text-amber-900">
+                  <i data-lucide="info" class="w-4 h-4"></i> 引き続き検証中の要点：
+                </p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>コスト（月額12,500円程度）の合理性</li>
+                  <li>利便性（アクセスや出し入れの容易さ）</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 次回予告ブロック -->
+      <div class="mt-16 pt-10 border-t border-stone-200">
+        <div class="bg-teal-950 text-white rounded-2xl p-8 relative overflow-hidden shadow-lg">
+          <div class="absolute right-0 top-0 opacity-10 transform translate-x-4 -translate-y-4">
+            <i data-lucide="calendar" class="w-56 h-56"></i>
+          </div>
+          <div class="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+            <div>
+              <p class="text-xs text-teal-300 font-bold tracking-widest uppercase">Next Committee Meeting</p>
+              <h3 class="serif-title text-2xl font-bold mt-1.5">次回 いきいき運営委員会 開催予定</h3>
+            </div>
+            <div class="bg-amber-500 text-teal-950 font-black px-6 py-3.5 rounded-xl text-base shadow-md flex items-center gap-2.5 self-start sm:self-auto hover:bg-amber-400 transition-colors">
+              <i data-lucide="calendar-days" class="w-5 h-5"></i>
+              <span>6月26日（金） 開催予定</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Lucideアイコンの初期化
+    lucide.createIcons();
+  </script>
+</body>
+</html>
