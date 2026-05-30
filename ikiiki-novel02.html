@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沈みゆく船の灯火：ある市民大学同窓会の選択</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Serif JP & Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Serif JP', serif;
+            background-color: #fcfbf9; /* 温かみのあるオフホワイト */
+            color: #1c1917; /* 深みのある石炭色（目に優しい） */
+        }
+        .sans-font {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        /* スムーススクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* ドロップキャップ（先頭の文字を大きく） */
+        .drop-cap::first-letter {
+            font-family: 'Noto Serif JP', serif;
+            font-weight: 900;
+            font-size: 3.5rem;
+            float: left;
+            line-height: 1;
+            padding-right: 0.5rem;
+            margin-top: 0.15rem;
+            color: #1e4646; /* 深いエメラルド */
+        }
+        /* スクロールバーのカスタマイズ */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1ede9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e4646;
+            border-radius: 4px;
+        }
+        /* 特徴的な区切り線 */
+        .story-divider {
+            position: relative;
+            text-align: center;
+            margin: 4rem 0;
+        }
+        .story-divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #c2410c, transparent);
+        }
+        .story-divider span {
+            position: relative;
+            background-color: #fcfbf9;
+            padding: 0 1.5rem;
+            color: #c2410c;
+            font-size: 1.2rem;
+        }
+    </style>
+    <script>
+        // Tailwindのカスタム設定
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#111e25',
+                            teal: '#1e4646',
+                            coral: '#c2410c',
+                            sand: '#fcfbf9',
+                            muted: '#78716c'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="selection:bg-teal-100 selection:text-brand-teal transition-colors duration-300">
+
+    <!-- 上部読了インジケーター（プログレスバー） -->
+    <div class="fixed top-0 left-0 w-full h-1.5 bg-stone-200 z-50">
+        <div id="progressBar" class="h-full bg-brand-coral transition-all duration-150" style="width: 0%;"></div>
+    </div>
+
+    <!-- メインコンテンツコンテナ：可読性向上のため、最大幅を抑えた美しい1カラムに変更 -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12 lg:py-20">
+        
+        <!-- 概要（ジャーナルアブストラクト風にヘッダー上に美しくインライン配置） -->
+        <div class="mb-10 text-center sans-font">
+            <span class="inline-block bg-teal-50 text-brand-teal text-[10px] font-bold tracking-[0.2em] uppercase px-3 py-1 rounded border border-teal-100">
+                COMMUNITY DESIGN JOURNAL &bull; SPECIAL CASE STUDY
+            </span>
+        </div>
+
+        <!-- ジャーナルヘッダー部 -->
+        <header class="border-b-2 border-brand-teal pb-10 mb-12 text-center">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-brand-navy mb-6 tracking-tight">
+                沈みゆく船の灯火<br class="sm:hidden">
+                <span class="text-2xl sm:text-3xl block mt-2 text-brand-teal font-semibold">
+                    ある市民大学同窓会の選択
+                </span>
+            </h1>
+            
+            <!-- 概要をコンパクトにヘッダー内に統合 -->
+            <p class="max-w-2xl mx-auto text-xs sm:text-sm text-brand-muted italic leading-relaxed mb-6 px-4">
+                「高齢化と財政難という、現代の地域コミュニティが直面する生存の危機。監査の『ルール』と事務局長の『愛』が激突したとき、ひとつの小さな奇跡が生まれる。」
+            </p>
+
+            <div class="sans-font text-xs text-brand-muted flex flex-wrap justify-center items-center gap-x-4 gap-y-2 mt-4 pt-4 border-t border-stone-100">
+                <span class="font-medium">構成・編集：ジャーナル編集部</span>
+                <span>|</span>
+                <span>読了予定：約 7 分</span>
+                <span>|</span>
+                <!-- コントロール：文字サイズ調整 -->
+                <div class="flex items-center gap-2 border border-stone-300 rounded px-2 py-0.5 bg-white shadow-sm">
+                    <button onclick="changeFontSize('small')" class="text-xs px-2 py-0.5 hover:bg-stone-100 rounded font-bold">A-</button>
+                    <span class="text-[10px] text-stone-500 font-bold uppercase">Size</span>
+                    <button onclick="changeFontSize('large')" class="text-xs px-2 py-0.5 hover:bg-stone-100 rounded font-bold">A+</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- 本文レイアウト（洗練された1カラム） -->
+        <main id="articleBody" class="text-lg leading-relaxed text-stone-800 space-y-12">
+            
+            <!-- 第一章 -->
+            <section id="chapter1" class="scroll-mt-12">
+                <div class="sans-font text-brand-teal text-xs font-bold tracking-widest uppercase mb-2">Chapter I</div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-brand-navy mb-6 border-b pb-3">
+                    第一章：数字の裏に隠された「命」
+                </h2>
+                
+                <p class="drop-cap mb-6">
+                    夕暮れ時の古い市民センター。冷たい蛍光灯の下で、誠司（せいじ）は机の上に広げられた決算書を、血の気の引いた指先で押さえていました。
+                </p>
+                
+                <p class="mb-6">
+                    「はぁ……。見てくれ、春香。来期は <span class="bg-amber-50 text-brand-coral px-1.5 py-0.5 rounded border border-amber-200 font-semibold sans-font text-base">40万円</span> の赤字だ。会員数も毎年 <span class="bg-amber-50 text-brand-coral px-1.5 py-0.5 rounded border border-amber-200 font-semibold sans-font text-base">2割</span> ずつ減っている。このままだと、僕たちの船は来年、跡形もなく沈む」
+                </p>
+
+                <p class="mb-6">
+                    元財務畑 of ビジネスマンだった誠司は、眼鏡をクイッと押し上げ、あえて冷徹な声を意識していました。そうしなければ、自分自身の胸を締め付ける恐怖に押しつぶされそうだったからです。
+                </p>
+
+                <p class="mb-6">
+                    事務局長の春香（はるか）は、深くため息をつき、ぬるくなったお茶をごくりと飲みました。その目は赤く潤んでいました。
+                </p>
+
+                <p class="mb-6">
+                    「わかっているわ、誠司。市の補助金 <span class="font-semibold text-brand-teal sans-font text-base">90万円</span> をもらうために、無理に <span class="font-semibold text-brand-teal sans-font text-base">180万円</span> の事業規模を維持すること自体、もう限界なのは百も承知よ。でもね、だからといって『誠実な縮小』なんて言ってイベントを次々に廃止したら、この会はただの『死を待つ部屋』になってしまうわ！」
+                </p>
+
+                <!-- 強調表示：対立するふたつの意見（縦並び・文字を大きく変更） -->
+                <div class="my-10 flex flex-col gap-6 sans-font text-base md:text-lg">
+                    <div class="bg-teal-50/50 border-l-4 border-brand-teal p-5 rounded-r shadow-sm">
+                        <span class="block text-brand-teal font-bold mb-2 text-xs uppercase tracking-widest">誠司の主張 【ルールと縮小】</span>
+                        <p class="leading-relaxed text-stone-800">
+                            「それでも、身の丈に合わせた <span class="font-bold text-brand-teal">100万円</span> 以下の組織にするしかないんだ！ 予算を削り、活動を縮小する。それがルールを守る『誠実さ』だ！」
+                        </p>
+                    </div>
+                    <div class="bg-orange-50/50 border-l-4 border-brand-coral p-5 rounded-r shadow-sm">
+                        <span class="block text-brand-coral font-bold mb-2 text-xs uppercase tracking-widest">春香の主張 【愛と存続】</span>
+                        <p class="leading-relaxed text-stone-800 font-medium">
+                            「違うわ、誠司！ あなたが削ろうとしているその数字は、ただの『お金』じゃない。ここに集まるお年寄りたちの『命のともしび』なのよ！」
+                        </p>
+                    </div>
+                </div>
+
+                <p class="mb-6">
+                    二人の間に、重苦しい沈黙が流れました。この同窓会が抱える最大のジレンマ。それは、市の補助金 <span class="font-semibold">90万円</span> を受け取るために、自分たちも同額の <span class="font-semibold">90万円</span> を用意して、合計 <span class="font-semibold">180万円</span> の活動実績を市に見せなければならないという、硬直化したルールでした。会費収入が激減した今、その <span class="font-semibold">90万円</span> を捻出することは、普通の方法では絶対に不可能でした。
+                </p>
+            </section>
+
+            <div class="story-divider"><span>✦</span></div>
+
+            <!-- 第二章 -->
+            <section id="chapter2" class="scroll-mt-12">
+                <div class="sans-font text-brand-teal text-xs font-bold tracking-widest uppercase mb-2">Chapter II</div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-brand-navy mb-6 border-b pb-3">
+                    第二章：バスの窓から流れた涙
+                </h2>
+
+                <p class="mb-6">
+                    「だからって、あのバス旅行の『通過金』で帳簿を膨らせるグレーなやり方は、もう限界だ！」誠司は声を荒らげました。「参加費の <span class="font-semibold">5000円</span> を、一度同窓会の口座に入れて出すだけで、中身のない <span class="font-semibold">180万円</span> の規模をでっち上げる。もし市の監査に見つかったら、信用はゼロ、補助金は全額返還だ。そんな嘘で塗り固めた居場所が、本当に正しいと言えるのか！？」
+                </p>
+
+                <p class="mb-6">
+                    「嘘なんかじゃないわ！」<br>
+                    春香は泣きながら、誠司を真っ直ぐに見つめました。
+                    「誠司、あなた、去年の秋のバス旅行で、一番後ろの席に座っていた辰（たつ）おじいちゃんを覚えている？」
+                </p>
+
+                <p class="mb-6">
+                    誠司は言葉に詰まりました。おぼろげながら、いつも背中を丸めて静かにしていた、<span class="font-semibold sans-font">80歳</span> の老人の姿が脳裏に浮かびました。
+                </p>
+
+                <p class="mb-6">
+                    「辰さんはね、３年前に奥さんを亡くしてから、誰とも口をきかずに家に引きこもっていたの。娘さんから『父がこのまま孤独死してしまうかもしれない』って相談されて、私何度も何度も家を訪ねて、ようやくあのバス旅行に誘い出したのよ。……覚えている？ 旅行の帰り際、辰さんがカラオケのマイクを握って、奥さんとの思い出の曲を歌ったときのことを」
+                </p>
+
+                <!-- 美しいエモーショナル引用ブロック -->
+                <blockquote class="my-10 border-l-4 border-brand-coral pl-6 py-2 italic text-stone-700 bg-orange-50/20 rounded-r">
+                    <p class="mb-3 font-semibold text-lg text-brand-navy">
+                        「辰さんね、バスを降りるときに、私の手を握って泣いたのよ。『もう一度、生きていてよかった。人と笑い合えて、本当によかった』って。」
+                    </p>
+                    <cite class="sans-font text-sm text-brand-muted not-italic block text-right">— 事務局長・春香</cite>
+                </blockquote>
+
+                <p class="mb-6">
+                    「誠司、あの涙も、あの笑顔も、帳簿の上の『余計な数字』として切り捨てるの？ 私はね、市のルールにそぐわないと言われても、あの辰さんの涙を守りたい。そのためなら、どんなグレーな泥水だってすすってみせる。それが、私の信じる愛よ！」
+                </p>
+
+                <p class="mb-6">
+                    誠司は、ぐうの音も出ずに黙り込んでしまいました。彼の頭の中で、冷徹な「<span class="font-semibold">40万円</span> の赤字」という数字が、辰おじいちゃんの流した涙の温もりにかき消されていくようでした。
+                </p>
+            </section>
+
+            <div class="story-divider"><span>✦</span></div>
+
+            <!-- 第三章 -->
+            <section id="chapter3" class="scroll-mt-12">
+                <div class="sans-font text-brand-teal text-xs font-bold tracking-widest uppercase mb-2">Chapter III</div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-brand-navy mb-6 border-b pb-3">
+                    第三章：秘密の通帳と、不器用な愛
+                </h2>
+
+                <p class="mb-6">
+                    「……みんなの居場所を守りたいのは、僕だって同じだ」誠司は声を震わせながら、別の資料を取り出しました。「でもね、同好会（サークル）へのお金の配り方はあまりにもルーズだ。過去 <span class="font-semibold sans-font">5年間</span>、活動実績も確かめずに一律 <span class="font-semibold">1万5千円</span> から <span class="font-semibold">4万円</span> の助成金を配り続けている。中には、お金を使い切れずに、同好会の『秘密口座』にコッソリ貯金（繰越金）しているサークルまであるんだぞ。会員名簿すら出さないサークルに、なぜ同窓会のお金を流し続けなければならないんだ」
+                </p>
+
+                <p class="mb-6">
+                    「それは……」<br>
+                    春香が言い淀んだその時、会議室のドアが静かに開きました。
+                </p>
+
+                <p class="mb-6">
+                    入ってきたのは、パークゴルフ同好会の代表を務めるよし江さん（<span class="font-semibold sans-font">75歳</span>）でした。彼女は古びた通帳を両手でしっかりと抱きしめていました。
+                </p>
+
+                <!-- ダイアログ風カード -->
+                <div class="bg-stone-50 border border-stone-200 p-6 rounded-lg my-8 shadow-sm">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-teal text-white flex items-center justify-center font-bold sans-font">よし</div>
+                        <div>
+                            <h4 class="font-bold text-brand-navy">よし江さん</h4>
+                            <p class="text-xs text-brand-muted">パークゴルフ同好会 代表 (75)</p>
+                        </div>
+                    </div>
+                    <p class="text-base leading-relaxed text-stone-700 italic">
+                        「誠司さん、春香さん。立ち聞きするような真似をしてごめんなさいね。誠司さんの言う通り、私たちはサークルのお金を溜め込んでいました。名簿も出さずにね。でもね、それは私たちが贅沢をしたいからじゃないの……。もし、同窓会が明日潰れてしまっても、私たちのパークゴルフの集まりだけは絶対に続けよう。この通帳のお金があれば、もう1年はみんなで集まれる。誰一人、また孤独に引きこもらせないようにしようって、みんなで話し合って決めたの」
+                    </p>
+                </div>
+
+                <p class="mb-6">
+                    よし江さんの目から、涙が溢れ出しました。
+                    「名簿を出さなかったのは、個人情報を出すのが怖かったんじゃない。もし名簿を出して、私たちの同好会が正式に解散させられてしまったら、仲間との糸が完全に切れてしまうのが怖かったの。不器用で、ごめんなさい。でもね、私たちはみんな、この同窓会を、仲間を愛しているのよ」
+                </p>
+
+                <p class="mb-6">
+                    誠司は、通帳を見つめたまま、言葉を失いました。
+                    彼が「ルール違反」「甘え」と切り捨てていた繰越金は、お年寄りたちが仲間を失いたくない一心で、身を寄せ合って守ろうとした「不器用な愛の砦」だったのです。
+                </p>
+            </section>
+
+            <div class="story-divider"><span>✦</span></div>
+
+            <!-- 第四章 -->
+            <section id="chapter4" class="scroll-mt-12">
+                <div class="sans-font text-brand-teal text-xs font-bold tracking-widest uppercase mb-2">Chapter IV</div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-brand-navy mb-6 border-b pb-3">
+                    第四章：ルームアドバイザーたちの奇跡
+                </h2>
+
+                <p class="mb-6">
+                    「……そうだったのか」<br>
+                    誠司は眼鏡を外し、目元を熱いものが覆うのを止められませんでした。
+                    実は誠司自身も、数年前に大企業を定年退職した際、社会から自分の存在を消されたような強烈な孤独感に苛まれていました。彼を救ったのも、この同窓会の歴史文学サークルだったのです。
+                    「僕も……この場所を失いたくない。絶対に潰したくないんだ」
+                </p>
+
+                <p class="mb-6">
+                    誠司の告白に、春香は優しく微笑み、彼の肩に手を置きました。
+                </p>
+
+                <p class="mb-6">
+                    「誠司、それなら、新しい会員を増やすためのルームアドバイザー（RA）たちのことも、信じてあげて。週に <span class="font-semibold sans-font">3000円</span> の手当を出しているからって、『年間 <span class="font-semibold sans-font">70人</span> 集めろ』なんてノルマを課したら、彼らは壊れてしまうわ。彼らも、この場所に救われたボランティアの仲間なのよ」
+                </p>
+
+                <p class="mb-6">
+                    「では、どうすればいいんだ？ <span class="font-semibold sans-font">70人</span> の新規会員を入れなければ、物理的に会は破綻する」
+                </p>
+
+                <p class="mb-6">
+                    「だからこそ、お茶とお菓子を用意して、みんなで本音で話す『ふらっとサロン』を開くの。強制する『北風』ではなく、愛と共感で温める『太陽』の作戦よ」
+                </p>
+
+                <p class="mb-6">
+                    翌週、市民センターの和室で、そのフラットサロンが開かれました。畳の上には、春香が用意した温かいお茶と、色とりどりのお菓子が並んでいました。集まった十数人のRAたちの前で、誠司は自らマイクを握りました。
+                </p>
+
+                <p class="mb-6">
+                    「皆さん、今日は数字の報告ではありません。僕自身の、恥ずかしい告白を聞してください」
+                </p>
+
+                <p class="mb-6">
+                    誠司は、自分が定年後に引きこもりかけ、この会に救われたこと、誠実でありたいがあまり冷酷なルールを押し付けようとしていたことを、声を詰まらせながら正直に話しました。
+                </p>
+
+                <!-- クライマックスの独白 -->
+                <div class="bg-stone-900 text-stone-100 p-8 rounded-lg shadow-lg my-8 relative overflow-hidden">
+                    <div class="absolute right-4 bottom-4 text-brand-teal opacity-10 font-bold text-8xl pointer-events-none sans-font">LIFE</div>
+                    <p class="text-lg leading-relaxed italic mb-4">
+                        「今、この同窓会は、来期に解散せざるを得ないほどのピンチに陥っています。僕の力不足です。でも、どうしても、皆さんの大切なこの場所を守りたい。どうか……どうか、僕に力を貸してください」
+                    </p>
+                    <p class="text-sm text-brand-coral font-bold sans-font text-right">誠司、涙の告白</p>
+                </div>
+
+                <p class="mb-6">
+                    しばらくの間、静寂が室内を支配しました。やがて、一人のRAの女性が立ち上がり、誠司の手を優しく包み込みました。
+                </p>
+
+                <p class="mb-6">
+                    「誠司さん、顔を上げて。私たちは、手当の <span class="font-semibold sans-font">3000円</span> のためにここにいるんじゃない。私たちもね、この同窓会に命を救われたの。誠司さんがそこまで本気で私たちを頼ってくれるなら、断る理由なんてないわ。みんな！ 年間 <span class="font-semibold sans-font">70人</span> なんて言わず、一人あたり <span class="font-semibold sans-font">5人</span> ずつ、大切な友達をこの会に連れてきましょうよ！」
+                </p>
+
+                <p class="mb-6">
+                    和室の中に、わっと大きな歓声と拍手が沸き起こりました。お年寄りたちが、お互いの手を握り合い、涙を流しながら笑顔で頷き合っていました。それは、お金でも、ルールでも、ノルマでも動かすことのできなかった、強固な「愛」が一つになった瞬間でした。
+                </p>
+            </section>
+
+            <div class="story-divider"><span>✦</span></div>
+
+            <!-- 結び -->
+            <section id="conclusion" class="scroll-mt-12 pb-12">
+                <div class="sans-font text-brand-teal text-xs font-bold tracking-widest uppercase mb-2">Epilogue</div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-brand-navy mb-6 border-b pb-3">
+                    結び：未来へ進む、愛の船
+                </h2>
+
+                <p class="mb-6">
+                    数ヶ月後。同窓会には、RAたちの不眠不休の草の根活動によって、目標を大きく上回る新規会員集まり始めていました。
+                </p>
+
+                <p class="mb-6">
+                    同好会は、秘密の通帳を自主的に親組織に返還し、その代わりに、お互いの活動報告を笑顔で発表し合う透明な組織へと、自らの意志で生まれ変わりました。
+                </p>
+
+                <p class="mb-6">
+                    誠司は再び、決算書を前にして座っていました。しかし今、その決算書に並ぶ数字は、冷酷な死刑宣告ではなく、会員一人ひとりの愛と汗が紡ぎ出した「希望の設計図」に見えていました。
+                </p>
+
+                <p class="mb-6">
+                    「誠司、お疲れ様。本当に、よくここまで帳簿を立て直してくれたわね」<br>
+                    春香が、温かい紅茶を誠司の机の上に置きました。
+                </p>
+
+                <p class="mb-6">
+                    「いや、僕がやったんじゃない。みんなの愛が、この船を動かしているんだ。僕はただ、その愛がこぼれ落ちないように、会計という名の頑丈な『器』を作っているに過ぎないよ」
+                </p>
+
+                <p class="mb-6">
+                    誠司は眼鏡を外して微笑みました。
+                    「これからは、ただ縮小するんじゃない。みんなの笑顔を乗せた、世界一温かい <span class="font-bold text-brand-teal">100万円</span> の船を、堂々と走らせよう。補助金に頼り切るグレーなやり方も、少しずつ、でも確実に卒業していけるはずだ」
+                </p>
+
+                <p class="mb-6">
+                    「ええ。沈みかけていた船だけど、今はもう、未来を照らす温かい『灯火（ともしび）』になったわね」
+                </p>
+
+                <!-- 物語の締めくくりにふさわしい大きなまとめ -->
+                <div class="mt-12 border-t-2 border-brand-teal pt-8 text-center text-stone-600 sans-font text-sm">
+                    <p class="mb-2"><strong>沈みゆく船の灯火 —完—</strong></p>
+                    <p>（本稿は、地域福祉と非営利組織のガバナンスにおける実例調査を基にしたストーリーです）</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- JavaScript：プログレスバーとフォントサイズ変更の制御 -->
+    <script>
+        // 読了プログレスバー
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
+            document.getElementById('progressBar').style.width = scrollPercent + '%';
+        });
+
+        // 文字サイズ変更機能
+        function changeFontSize(action) {
+            const bodyText = document.getElementById('articleBody');
+            const currentSize = window.getComputedStyle(bodyText).fontSize;
+            let sizeNum = parseFloat(currentSize);
+
+            if (action === 'large' && sizeNum < 24) {
+                sizeNum += 2;
+            } else if (action === 'small' && sizeNum > 14) {
+                sizeNum -= 2;
+            }
+
+            bodyText.style.fontSize = sizeNum + 'px';
+        }
+    </script>
+</body>
+</html>
