@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>財政難における理想と現実の解決策（案）</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Noto Serif JP & Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@500;700;900&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #fcfbf9; /* 温かみのあるペーパーライクな背景 */
+      color: #1c1917; /* 墨色 */
+    }
+    .serif-title {
+      font-family: 'Noto Serif JP', serif;
+    }
+    /* ジャーナル風の二重線装飾 */
+    .journal-double-border {
+      border-top: 4px double #1c1917;
+      border-bottom: 4px double #1c1917;
+    }
+    /* ドロップキャップ */
+    .drop-cap::first-letter {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 3.5rem;
+      float: left;
+      line-height: 0.85;
+      padding-right: 0.5rem;
+      font-weight: 900;
+      color: #0f172a; /* ディープスレート */
+    }
+  </style>
+</head>
+<body class="py-12 px-4 sm:px-6 lg:px-8">
+
+  <div class="max-w-4xl mx-auto bg-white shadow-sm border border-stone-200/80 rounded-xl p-6 sm:p-12 md:p-16">
+    
+    <!-- ジャーナルヘッダー風装飾（ナビゲーションとしてのヘッダーは排除） -->
+    <div class="text-center mb-10">
+      <div class="text-xs font-bold tracking-widest text-slate-500 uppercase mb-2">— DECISION MEMORANDUM & POLICY PAPER —</div>
+      <div class="text-xs text-stone-400">いきいき同窓会 運営改革プロジェクト委員会</div>
+    </div>
+
+    <!-- タイトルエリア -->
+    <header class="text-center mb-12">
+      <h1 class="serif-title text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight tracking-tight mb-4">
+        財政難における「理想」と「現実」の解決策（案）
+      </h1>
+      <p class="text-base sm:text-lg text-teal-700 font-medium tracking-wide">
+        〜一律値上げに頼らず「補助金90万円」を死守し、持続可能な運営体制へ移行する〜
+      </p>
+      <div class="journal-double-border my-6 py-2 flex justify-between text-xs text-stone-500">
+        <span>発案：運営改革推進有志グループ</span>
+        <span>カテゴリ：組織改革・財務戦略</span>
+        <span>対象：全理事・会員各位</span>
+      </div>
+    </header>
+
+    <!-- プロローグ：ドロップキャップ -->
+    <div class="mb-12 text-stone-700 leading-relaxed text-sm sm:text-base">
+      <p class="drop-cap">
+        本提案は、一律の会費値上げによる会員の離脱を防ぎつつ、同窓会の運営生命線である「市の補助金90万円」を満額維持するための現実的な調停案である。現在、我々のコミュニティは会員の自然減と財務構造の硬直化という二重の危機に直面している。長澤会長が掲げる「会員ファースト」の理念と、厳然たる財務上のデッドラインの双方を満たすため、ここに持続可能な改革のグランドデザインを提示する。
+      </p>
+    </div>
+
+    <!-- Section 1 -->
+    <section class="mb-14">
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-rose-50 text-rose-700 px-2.5 py-1 rounded text-xs font-bold tracking-wide">SECTION 1</span>
+        <h2 class="serif-title text-xl sm:text-2xl font-bold text-slate-900">はじめに：今、同窓会が直面している「最悪のシナリオ」</h2>
+      </div>
+      
+      <p class="text-stone-600 text-sm sm:text-base mb-6 leading-relaxed">
+        もし我々が会費を現状維持のまま据え置き、かつ新たな収益の確保や経費の削減に一切着手しなかった場合、どのような事態が訪れるか。以下にその冷徹なシミュレーションを示す。
+      </p>
+
+      <div class="bg-stone-50 border border-stone-200 rounded-lg p-5 sm:p-6">
+        <h3 class="text-stone-800 font-bold text-sm sm:text-base mb-4 flex items-center gap-2">
+          <i data-lucide="trending-down" class="text-rose-600 w-5 h-5"></i>
+          無策の現状維持がもたらす結末（来期予測）
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+          <div class="bg-white p-4 rounded border border-stone-200">
+            <div class="text-xs text-stone-500 mb-1">自己収入（会費）</div>
+            <div class="text-xl font-bold text-slate-800">約 70 万円</div>
+            <div class="text-xs text-rose-600 mt-1">約580名への減少に伴う</div>
+          </div>
+          <div class="bg-white p-4 rounded border border-stone-200">
+            <div class="text-xs text-stone-500 mb-1">市の補助金</div>
+            <div class="text-xl font-bold text-slate-800">60 万円</div>
+            <div class="text-xs text-rose-600 mt-1">自己収入に連動して減額</div>
+          </div>
+          <div class="bg-white p-4 rounded border border-stone-200">
+            <div class="text-xs text-stone-500 mb-1">来期総事業可能費</div>
+            <div class="text-xl font-bold text-rose-600">120 万円</div>
+            <div class="text-xs text-stone-500 mt-1">計画比 △40万円の激減</div>
+          </div>
+        </div>
+        <div class="mt-4 p-3 bg-rose-50 text-rose-800 text-xs sm:text-sm rounded border border-rose-100 flex items-start gap-2">
+          <i data-lucide="alert-circle" class="w-5 h-5 shrink-0 mt-0.5"></i>
+          <div>
+            <strong>帰結：</strong> 予算不足により、これまで培ってきた主要事業（芸能大会、作品展等）の開催規模が大幅に制限され、同窓会活動そのものが形骸化へと向かいます。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="mb-14">
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-blue-50 text-blue-700 px-2.5 py-1 rounded text-xs font-bold tracking-wide">SECTION 2</span>
+        <h2 class="serif-title text-xl sm:text-2xl font-bold text-slate-900">長澤会長の「理想（理念）」と財務上の「現実」</h2>
+      </div>
+
+      <p class="text-stone-600 text-sm sm:text-base mb-6 leading-relaxed">
+        現在、執行部内で議論されている内容は、どちらか一方が誤っているわけではない。組織の未来を想う「理念」と、数字に縛られる「現実」の衝突である。
+      </p>
+
+      <!-- 対比レイアウト -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- 理想 -->
+        <div class="border-t-2 border-teal-600 bg-teal-50/20 p-5 sm:p-6 rounded-b-lg">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="bg-teal-600 text-white rounded-full p-1">
+              <i data-lucide="heart" class="w-4 h-4"></i>
+            </div>
+            <h4 class="font-bold text-teal-900 text-base">長澤会長の主張（理想・理念）</h4>
+          </div>
+          <ul class="space-y-3 text-stone-700 text-xs sm:text-sm leading-relaxed">
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600 mt-1 font-bold">・</span>
+              <span><strong>値上げ反対のロジック：</strong> 4年前に値上げしたばかり。HP開設や会報内製化などの現場努力がある中で、経費精査を怠った再値上げは順序が違う。</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-teal-600 mt-1 font-bold">・</span>
+              <span><strong>会員増強へのブレーキ懸念：</strong> 「いきいき同窓会」は仲間作りの場。値上げは新規参入を妨げ、既存会員の離脱を招く。</span>
+            </li>
+            <li class="bg-white/80 p-2.5 rounded border border-teal-100 text-teal-800 text-xs">
+              <strong>結論：</strong> まずは財務の可視化、経費削減、増強策の検証を最優先すべき。
+            </li>
+          </ul>
+        </div>
+
+        <!-- 現実 -->
+        <div class="border-t-2 border-amber-600 bg-amber-50/20 p-5 sm:p-6 rounded-b-lg">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="bg-amber-600 text-white rounded-full p-1">
+              <i data-lucide="line-chart" class="w-4 h-4"></i>
+            </div>
+            <h4 class="font-bold text-amber-950 text-base">同窓会を取り巻く環境（財務の現実）</h4>
+          </div>
+          <ul class="space-y-3 text-stone-700 text-xs sm:text-sm leading-relaxed">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-700 mt-1 font-bold">・</span>
+              <span><strong>補助金の絶対デッドライン：</strong> プロセスは正しいが、次年度の「期首（予算編成期）」に自己収入90万円を証明できなければ、その時点で市からの満額補助金90万円の獲得権利を失う。</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-700 mt-1 font-bold">・</span>
+              <span><strong>差し迫る時間の猶予：</strong> 経費見直しや会員増強の効果発現には数ヶ月〜数年の時間がかかるが、来期予算案は「今」確定させる必要がある。</span>
+            </li>
+            <li class="bg-white/80 p-2.5 rounded border border-amber-100 text-amber-900 text-xs">
+              <strong>結論：</strong> プロセスの検証を待っていては、来期の運営資金自体が枯渇する。
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="mb-14">
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-teal-50 text-teal-700 px-2.5 py-1 rounded text-xs font-bold tracking-wide">SECTION 3</span>
+        <h2 class="serif-title text-xl sm:text-2xl font-bold text-slate-900">解決に向けたハイブリッド戦略（調停案）</h2>
+      </div>
+
+      <p class="text-stone-600 text-sm sm:text-base mb-6 leading-relaxed">
+        「会員の負担はこれ以上増やさない」という理念を守りつつ、行政要件である「90万円の自己資金（収入枠）」をクリアする。この一見矛盾する課題を解決するための<strong>「ハイブリッド戦略」</strong>を提案する。
+      </p>
+
+      <!-- 予算構造の比較 -->
+      <div class="bg-slate-900 text-slate-100 rounded-lg p-5 sm:p-6 mb-8 shadow-md">
+        <h3 class="text-teal-400 font-bold text-sm sm:text-base mb-4 flex items-center gap-2">
+          <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+          新しい予算・収入構造案（自己資金目標：90万円）
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <!-- 従来 -->
+          <div class="border-r border-slate-700/60 pr-0 md:pr-6">
+            <div class="text-xs text-slate-400 mb-2 uppercase tracking-wider">従来型の構造</div>
+            <div class="bg-slate-800 p-3 rounded flex justify-between items-center text-sm">
+              <span>既存会員の会費のみ</span>
+              <span class="font-bold text-rose-400">70万円 <span class="text-xs text-rose-300">(不足20万)</span></span>
+            </div>
+            <p class="text-xs text-slate-400 mt-2">※会員減少にともない、単一の収入源では早晩立ち行かなくなる。</p>
+          </div>
+          <!-- 改革案 -->
+          <div>
+            <div class="text-xs text-teal-400 mb-2 uppercase tracking-wider">改革案：多角化構造</div>
+            <div class="space-y-2 text-xs sm:text-sm">
+              <div class="flex justify-between items-center bg-slate-800 px-3 py-1.5 rounded">
+                <span>① 基本会費（据え置き）</span>
+                <span class="font-bold">70 万円</span>
+              </div>
+              <div class="flex justify-between items-center bg-slate-800 px-3 py-1.5 rounded text-teal-300">
+                <span>② イベント市民開放（参加費収入）</span>
+                <span class="font-bold">+10 万円</span>
+              </div>
+              <div class="flex justify-between items-center bg-slate-800 px-3 py-1.5 rounded text-teal-300">
+                <span>③ 賛助会員（応援ドネーション）</span>
+                <span class="font-bold">+10 万円</span>
+              </div>
+              <div class="pt-2 border-t border-slate-700 flex justify-between items-center font-bold text-base text-teal-400">
+                <span>合計（自己資金計上）</span>
+                <span>90 万円達成！</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3つの戦略詳細 -->
+      <div class="space-y-6">
+        <!-- 戦略1 -->
+        <div class="border border-stone-200 rounded-lg p-5 sm:p-6 bg-white hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center text-teal-700 font-bold text-lg">1</div>
+            <div>
+              <span class="text-xs text-teal-600 font-bold uppercase tracking-wider">戦略 ①</span>
+              <h4 class="font-bold text-stone-900 text-sm sm:text-base">【収入の多角化】受益者負担と応援型ドネーションの導入</h4>
+            </div>
+          </div>
+          
+          <div class="space-y-4 pl-0 sm:pl-12 text-xs sm:text-sm text-stone-700 leading-relaxed">
+            <div>
+              <h5 class="font-bold text-stone-900 mb-1 flex items-center gap-1.5">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-teal-600"></span>
+                主要事業の「一般市民枠」開放と参加費徴収
+              </h5>
+              <p class="text-stone-600">
+                芸能大会、作品展、囲碁大会などのイベントを市民・家族へも開放。会員は従来どおり無料（または優遇）とし、非会員からイベントごとに「参加費（500〜1,000円）」を徴収して事業収入を積みます。
+              </p>
+            </div>
+            <div>
+              <h5 class="font-bold text-stone-900 mb-1 flex items-center gap-1.5">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-teal-600"></span>
+                「賛助会員（サポーター）制度」の創設
+              </h5>
+              <p class="text-stone-600">
+                市民大学校の修了生や家族、同窓会活動を応援したい一般市民、退会したOB等を対象に、一口1,000円程度でサポーターを募集。「会員としての活動参加は難しいが、応援したい」という資金の器を作ります。
+              </p>
+            </div>
+            <div>
+              <h5 class="font-bold text-stone-900 mb-1 flex items-center gap-1.5">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-teal-600"></span>
+                シニア向け「有料デジタル・スマホ教室」の自主事業化
+              </h5>
+              <p class="text-stone-600">
+                デジタル推進チームの知見を活かし、市民向けのスマホ・PC初心者教室を有料で開催。自治体のデジタルデバイド解消施策と連携し、新たな活動事業収入として計上します。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 戦略2 -->
+        <div class="border border-stone-200 rounded-lg p-5 sm:p-6 bg-white hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-700 font-bold text-lg">2</div>
+            <div>
+              <span class="text-xs text-blue-600 font-bold uppercase tracking-wider">戦略 ②</span>
+              <h4 class="font-bold text-stone-900 text-sm sm:text-base">【聖域なき経費削減】ローコスト・スマート運営の確立</h4>
+            </div>
+          </div>
+          
+          <div class="space-y-4 pl-0 sm:pl-12 text-xs sm:text-sm text-stone-700 leading-relaxed">
+            <div>
+              <h5 class="font-bold text-stone-900 mb-1 flex items-center gap-1.5">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                総務費（管理部門費）の徹底削減（19.5万円 ⇒ 10万円以内へ）
+              </h5>
+              <p class="text-stone-600">
+                理事会等の会場を、有料講堂から無料または安価な公民館の集会室へ変更。また、会議資料のペーパーレス化（LINE・Google Driveの活用）により、印刷代・コピー用紙代を極小化します。
+              </p>
+            </div>
+            <div>
+              <h5 class="font-bold text-stone-900 mb-1 flex items-center gap-1.5">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                縦割り組織の再編とイベントのPJ（プロジェクト）制移行
+              </h5>
+              <p class="text-stone-600">
+                「文化部」「健康スポーツ部」などを「企画事業部」へ統合。イベントごとに有志を募るプロジェクト制に移行することで、不要な会議費、通信費、交通費を大幅にカットします。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 戦略3 -->
+        <div class="border border-stone-200 rounded-lg p-5 sm:p-6 bg-white hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-amber-50 flex items-center justify-center text-amber-700 font-bold text-lg">3</div>
+            <div>
+              <span class="text-xs text-amber-600 font-bold uppercase tracking-wider">戦略 ③</span>
+              <h4 class="font-bold text-stone-900 text-sm sm:text-base">【対行政ロジックの転換】「公益性」を武器にした交渉</h4>
+            </div>
+          </div>
+          
+          <div class="space-y-4 pl-0 sm:pl-12 text-xs sm:text-sm text-stone-700 leading-relaxed">
+            <div>
+              <h5 class="font-bold text-stone-900 mb-1 flex items-center gap-1.5">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                「生涯学習の担い手」としての実績提示
+              </h5>
+              <p class="text-stone-600">
+                行政に対し、「会員だけの身内の親睦会」という建前を改め、「市民に開かれた生涯学習を格安で代行している、地域に不可欠な公益組織である」という大義名分を掲げてアピールします。
+              </p>
+            </div>
+            <div>
+              <h5 class="font-bold text-stone-900 mb-1 flex items-center gap-1.5">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                補助金交付要綱の定義変更交渉
+              </h5>
+              <p class="text-stone-600">
+                新執行部に「対外戦略チーム」を新設。高齢者福祉課や社会教育課などの縦割りの隙間を突き、補助金の自己資金要件緩和や別枠の助成金獲得に向けたロジカルな交渉を展開します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="mb-14">
+      <div class="flex items-center gap-2 mb-6">
+        <span class="bg-stone-100 text-stone-700 px-2.5 py-1 rounded text-xs font-bold tracking-wide">SECTION 4</span>
+        <h2 class="serif-title text-xl sm:text-2xl font-bold text-slate-900">合意形成への4ステップ・ロードマップ</h2>
+      </div>
+
+      <p class="text-stone-600 text-sm sm:text-base mb-6 leading-relaxed">
+        「共通理解」と「検証」のプロセスをしっかりと踏みながら、安全に来期予算を確定させ、最終合意へと着陸させるための4段階のロードマップ。
+      </p>
+
+      <!-- タイムライン / ステップ -->
+      <div class="relative pl-6 border-l-2 border-stone-200 space-y-8 ml-3">
+        <!-- Step 1 -->
+        <div class="relative">
+          <div class="absolute -left-[35px] top-0 bg-stone-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">1</div>
+          <div>
+            <h4 class="font-bold text-stone-900 text-sm sm:text-base flex items-center gap-2">
+              可視化（次回理事会）
+            </h4>
+            <p class="text-stone-600 text-xs sm:text-sm mt-1 leading-relaxed">
+              全理事に対し、会員減少に伴う「会費70万円への減少」と「補助金連動のルール」を実際の数値で開示。「何もしなければ予算が140万に縮小し活動が崩壊する」という冷徹な現実を全員で共有します。
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative">
+          <div class="absolute -left-[35px] top-0 bg-stone-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">2</div>
+          <div>
+            <h4 class="font-bold text-stone-900 text-sm sm:text-base flex items-center gap-2">
+              対話とブレスト（グループワーク）
+            </h4>
+            <p class="text-stone-600 text-xs sm:text-sm mt-1 leading-relaxed">
+              「一律値上げを行うか」「値上げせず外部から参加費や賛助金を集めるか」の二択を提示。「値上げ反対」の理念を軸に、「どうやって外部から収入を得るか」「どこを削れるか」を全員でブレストし、当事者意識を高めます。
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative">
+          <div class="absolute -left-[35px] top-0 bg-stone-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">3</div>
+          <div>
+            <h4 class="font-bold text-stone-900 text-sm sm:text-base flex items-center gap-2">
+              ハイブリッド予算の策定（来期計画）
+            </h4>
+            <p class="text-stone-600 text-xs sm:text-sm mt-1 leading-relaxed">
+              基本会費は据え置きつつ、「市民参加費＋賛助会員費」で20万円の上乗せを目指す【チャレンジ予算案】を市に提出し、補助金90万円の満額交付を期首に申請・確定させます。
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="relative">
+          <div class="absolute -left-[35px] top-0 bg-teal-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">4</div>
+          <div>
+            <h4 class="font-bold text-teal-700 text-sm sm:text-base flex items-center gap-2">
+              期中検証と段階的対応（来期末）
+            </h4>
+            <p class="text-stone-600 text-xs sm:text-sm mt-1 leading-relaxed">
+              RA（地域アシスタント）連携や市民開放による会員増強、外部収入増の成果を年度末に数値で徹底検証。これら全ての努力（削減・外部資金・増強）を行ってもなお財政が好転しない場合に限り、最終手段として初めて「会費改定」の是非を会員に問います。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section class="border-t border-stone-200 pt-10">
+      <div class="text-center max-w-2xl mx-auto">
+        <h3 class="serif-title text-xl sm:text-2xl font-bold text-slate-900 mb-4">結 論</h3>
+        <p class="text-stone-700 text-sm sm:text-base leading-relaxed mb-8">
+          いきいき同窓会が目指すべきは、「予算の辻褄を合わせるためだけの一律値上げ」でもなければ、「財務を無視した一律値上げ反対」でもありません。取るべき真の解決策は、<strong>「会員ファースト」「原点回帰」を守りつつ、「地域に開かれた公益的な組織へと同窓会をバージョンアップさせ、一般市民を巻き込んだ活動から新たな財源を獲得すること」</strong>です。
+        </p>
+      </div>
+
+      <!-- コラム風の「道は常に開かれている」 -->
+      <div class="bg-stone-50 border-y border-stone-200/80 p-6 sm:p-8 rounded-lg mt-4">
+        <div class="max-w-xl mx-auto text-center">
+          <span class="text-xs font-bold text-stone-400 tracking-widest uppercase block mb-3">— PERSPECTIVE —</span>
+          <h4 class="serif-title text-base sm:text-lg font-bold text-stone-800 mb-3">「道」は常に開かれている</h4>
+          <p class="text-stone-600 text-xs sm:text-sm leading-relaxed italic">
+            "一見、目の前のすべてのドアが閉ざされ、八方塞がりに思える瞬間であっても、それは単に視野が狭くなっていることによる錯覚です。時があり、思考する人間、仲間がいる限り、どこかに突破口は必ず残されています。完全に閉ざされることは絶対にないという強い信念こそが、暗闇から救い出し、新たな地平へと導きます。"
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
