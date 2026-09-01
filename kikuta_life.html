@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>波涛を越えて、大地に咲く ― 菊田 栄の軌跡</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Shippori Mincho, Plus Jakarta Sans, Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Shippori Mincho"', 'serif'],
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            en: ['"Cinzel"', 'serif'],
+          },
+          colors: {
+            journal: {
+              navy: '#0f2942',
+              ocean: '#1e4b7a',
+              teal: '#0e7490',
+              gold: '#c59b27',
+              earth: '#2d6a4f',
+              sand: '#f8f7f2',
+              paper: '#fcfbf7',
+              border: '#e5e0d3',
+              ink: '#1c242c',
+              muted: '#64748b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #f4f1ea;
+      color: #1c242c;
+      font-feature-settings: "palt";
+    }
+    
+    .drop-cap::first-letter {
+      font-size: 3.5rem;
+      float: left;
+      line-height: 0.85;
+      padding-right: 0.6rem;
+      padding-top: 0.2rem;
+      font-weight: 700;
+      color: #0f2942;
+      font-family: 'Shippori Mincho', serif;
+    }
+
+    .paper-shadow {
+      box-shadow: 0 4px 20px -2px rgba(15, 41, 66, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+    }
+
+    .chapter-heading {
+      position: relative;
+      display: inline-block;
+    }
+    .chapter-heading::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, #c59b27, transparent);
+    }
+  </style>
+</head>
+<body class="font-sans antialiased py-6 md:py-12 px-3 sm:px-6 lg:px-8 selection:bg-journal-gold selection:text-white">
+
+  <!-- メイン記事コンテナ（ジャーナル本文） -->
+  <main class="max-w-4xl mx-auto bg-journal-paper border border-journal-border rounded-xl paper-shadow overflow-hidden transition-all">
+    
+    <!-- ジャーナル メタバー（巻号・カテゴリ情報） -->
+    
+    <div class="p-6 md:p-12 lg:p-16 space-y-12">
+      
+      <!-- タイトルセクション -->
+      <header class="text-center space-y-6 pb-8 border-b border-journal-border">
+        <div class="inline-flex items-center gap-2 text-journal-gold text-sm font-semibold tracking-widest uppercase">
+          <i data-lucide="compass" class="w-4 h-4"></i>
+          <span>Biographical Chronicle & Philosophy</span>
+        </div>
+
+        <h1 class="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-journal-navy leading-tight tracking-wide">
+          波涛を越えて、大地に咲く
+        </h1>
+        
+        <p class="text-lg sm:text-2xl font-serif text-journal-ocean font-medium">
+          ― 菊田 栄の軌跡 ―
+        </p>
+
+        <p class="text-sm md:text-base text-gray-600 font-serif italic max-w-xl mx-auto">
+          海とともに、時代とともに、人とともに。学び続け、支え続け、笑顔をつなぐ
+        </p>
+
+        <!-- アブストラクト（要約）ボックス -->
+        <div class="mt-8 text-left bg-journal-sand/80 border-l-4 border-journal-ocean p-5 md:p-6 rounded-r-lg space-y-2">
+          <div class="flex items-center gap-2 text-journal-navy font-bold text-xs uppercase tracking-wider">
+            <i data-lucide="bookmark" class="w-4 h-4 text-journal-gold"></i>
+            <span>Executive Abstract</span>
+          </div>
+          <p class="text-sm md:text-base leading-relaxed text-gray-700 font-sans">
+            昭和13年、気仙沼の港町に生を受け、戦後復興・高度経済成長期の水産商社マンとして台湾・東南アジアの最前線を駆けた菊田栄。60歳を前にした化学薬品商社への転身、そして70歳の定年後は船橋の地で子どもたちを見守るスクールガードと市民大学での園芸探求に身を捧げた。「現場主義」「生涯学習」「地域貢献」を軸に紡がれた、海から大地へと繋がる半世紀超の全記録。
+          </p>
+          <div class="pt-2 flex flex-wrap gap-2 text-xs">
+            <span class="px-2.5 py-1 bg-white rounded border border-journal-border text-journal-navy">#気仙沼</span>
+            <span class="px-2.5 py-1 bg-white rounded border border-journal-border text-journal-navy">#海外駐在</span>
+            <span class="px-2.5 py-1 bg-white rounded border border-journal-border text-journal-navy">#スクールガード</span>
+            <span class="px-2.5 py-1 bg-white rounded border border-journal-border text-journal-navy">#市民大学園芸</span>
+            <span class="px-2.5 py-1 bg-white rounded border border-journal-border text-journal-navy">#生涯現役</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- コアフィロソフィー＆信条ハイライト（インフォグラフィック風） -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gradient-to-br from-journal-navy/5 via-transparent to-journal-earth/5 p-6 rounded-xl border border-journal-border">
+        
+        <!-- 大切にしてきたこと -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-journal-navy font-serif font-bold text-lg border-b border-journal-border pb-2">
+            <i data-lucide="shield-check" class="w-5 h-5 text-journal-ocean"></i>
+            <h3>大切にしてきた信条</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-gray-700">
+            <li class="flex items-start gap-2.5">
+              <span class="inline-block mt-1 w-2 h-2 rounded-full bg-journal-ocean flex-shrink-0"></span>
+              <div>
+                <strong class="text-journal-navy">挑戦する心：</strong>
+                <span>「現場を知らぬ者に、商いはできない」泥臭い現場の汗から学ぶ姿勢</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="inline-block mt-1 w-2 h-2 rounded-full bg-journal-gold flex-shrink-0"></span>
+              <div>
+                <strong class="text-journal-navy">誠実に向き合うこと：</strong>
+                <span>異国の地でも異分野でも、膝を突き合わせ信頼を築く誠実さ</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="inline-block mt-1 w-2 h-2 rounded-full bg-journal-teal flex-shrink-0"></span>
+              <div>
+                <strong class="text-journal-navy">学び続ける姿勢：</strong>
+                <span>何歳になっても好奇心を失わず、三度の失敗にも屈しない探求心</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="inline-block mt-1 w-2 h-2 rounded-full bg-journal-earth flex-shrink-0"></span>
+              <div>
+                <strong class="text-journal-navy">人を支え、見守ること：</strong>
+                <span>家庭を錨とし、地域の子どもたちの登下校を守る温かな奉仕</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="inline-block mt-1 w-2 h-2 rounded-full bg-amber-700 flex-shrink-0"></span>
+              <div>
+                <strong class="text-journal-navy">自然とともに生きる喜び：</strong>
+                <span>海を渡り、やがて土を耕し命を育てる豊かな循環</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 人生の軸とメッセージ -->
+        <div class="space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center gap-2 text-journal-navy font-serif font-bold text-lg border-b border-journal-border pb-2">
+              <i data-lucide="heart-handshake" class="w-5 h-5 text-journal-gold"></i>
+              <h3>人生の軸とフィロソフィー</h3>
+            </div>
+            <div class="p-4 bg-white/80 rounded-lg border border-journal-border text-center space-y-2">
+              <div class="text-xs font-mono text-journal-muted tracking-widest">LIFE CORE DYNAMICS</div>
+              <div class="text-base font-serif font-bold text-journal-ocean">
+                1938 誕生 → ［ 挑戦 ⇄ 学び ］
+              </div>
+              <p class="text-xs text-gray-600">
+                人生の軸は「学び」と「貢献」。<br>いつの時代も、誰かのために自分らしく輝き続ける。
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-journal-navy text-white p-4 rounded-lg space-y-1">
+            <div class="flex items-center gap-2 text-journal-gold text-xs font-bold uppercase tracking-wider">
+              <i data-lucide="quote" class="w-3.5 h-3.5"></i>
+              <span>Core Message</span>
+            </div>
+            <p class="text-sm font-serif italic text-journal-sand leading-snug">
+              「経験は財産。出会いは宝物。今日という日を、誰かの笑顔のために使おう。」
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 本文 セクション（全五章） -->
+      <article class="space-y-12 leading-relaxed text-gray-800 text-justify">
+        
+        <!-- 第一章 -->
+        <section class="space-y-4 pt-4">
+          <div class="flex items-baseline gap-3">
+            <span class="font-en text-2xl font-bold text-journal-gold">Chapter I</span>
+            <h2 class="text-xl md:text-2xl font-serif font-bold text-journal-navy chapter-heading">
+              海鳴りと、夏の終わり
+            </h2>
+          </div>
+          
+          <div class="text-base md:text-[1.05rem] space-y-4 font-serif text-gray-800">
+            <p class="drop-cap">
+              昭和十三年（一九三八年）九月。宮城県気仙沼の港町で、ひとりの男児が産声をあげた。名を、菊田栄という。
+              眼前にはどこまでも広がる太平洋の青。潮風の香りと、水揚げに沸く威勢のいい漁師たちの声が、栄にとっての最初の子守歌だった。
+            </p>
+            <p>
+              しかし、幼少期の日本は激動の荒波の中にあった。昭和二十年四月、栄は国民学校に入学する。のちに自らの手帳に「最後の入学生」と書き添えることになるその春、教室に漂っていたのは緊迫した時代の空気だった。
+            </p>
+            <p>
+              そしてその年の八月十五日、蝉時雨の中で迎えた終戦。幼い胸に刻まれたのは、静まり返る街と、これから新しい時代が始まるのだという微かな胎動だった。
+            </p>
+            <p>
+              瓦礫から立ち上がる日本とともに、栄少年もまた逞しく育っていった。気仙沼の豊かな海を見つめながら過ごした日々は、栄の心に「海を舞台に生きる」という強い矜持を育んでいく。
+              昭和三十二年春、地元の水産高校を卒業した栄は、大きな志を胸に東京へと向かった。
+            </p>
+          </div>
+        </section>
+
+        <!-- 第二章 -->
+        <section class="space-y-4 pt-4 border-t border-journal-border">
+          <div class="flex items-baseline gap-3">
+            <span class="font-en text-2xl font-bold text-journal-ocean">Chapter II</span>
+            <h2 class="text-xl md:text-2xl font-serif font-bold text-journal-navy chapter-heading">
+              丸ビルから海を越えて
+            </h2>
+          </div>
+          
+          <div class="text-base md:text-[1.05rem] space-y-4 font-serif text-gray-800">
+            <p class="drop-cap">
+              上京した栄の前にそびえ立っていたのは、東京駅前に堂々と構える赤レンガの旧丸の内ビルヂング（旧丸ビル）だった。
+              昭和のビジネスの中心地にあった水産専門商社。そこで栄はアルバイトとして働き始める。
+            </p>
+            <p>
+              大学で学びながら、長期休暇のたびに工場や関連会社での過酷な現場研修に飛び込んだ。魚の目利きから流通の仕組み、泥臭い現場の汗まで、すべてを貪欲に吸収していく。
+            </p>
+            
+            <!-- インライン引用ブロック -->
+            <blockquote class="my-4 p-4 border-l-4 border-journal-gold bg-journal-sand font-sans text-sm md:text-base text-journal-navy font-semibold italic">
+              「現場を知らぬ者に、商いはできない」
+            </blockquote>
+
+            <p>
+              そのひたむきな働きぶりは周囲の信頼を集め、昭和三十六年四月、大学卒業と同時に正式に社員として迎え入れられた。栄の視野は、すでに日本の枠を飛び越えていた。
+            </p>
+            <p>
+              入社からわずか半年後の九月、命じられたのは台湾への駐在。まだ海外渡航が容易ではなかった時代、二十代前半の若き商社マン・菊田栄は、言葉も文化も異なる異国の地に降り立った。
+            </p>
+            <p>
+              昭和三十九年（一九六四年）七月、東京オリンピック開幕を目前に控えて熱狂する日本へ帰国し、本社営業部へ配属となる。担当は東南アジア全域。年に何度も飛行機に飛び乗り、熱気あふれるアジアの市場を駆け巡った。スコールが叩きつける街で現地の人々と膝を突き合わせ、日本の食卓とアジアの海をつなぐ架け橋となる。高度経済成長期の最前線で、栄はまさに時代の波頭を駆けていた。
+            </p>
+          </div>
+        </section>
+
+        <!-- 第三章 -->
+        <section class="space-y-4 pt-4 border-t border-journal-border">
+          <div class="flex items-baseline gap-3">
+            <span class="font-en text-2xl font-bold text-journal-teal">Chapter III</span>
+            <h2 class="text-xl md:text-2xl font-serif font-bold text-journal-navy chapter-heading">
+              家族の港、そして新たな転機
+            </h2>
+          </div>
+          
+          <div class="text-base md:text-[1.05rem] space-y-4 font-serif text-gray-800">
+            <p class="drop-cap">
+              世界を相手に疾走していた栄に、昭和四十一年（一九六六年）十一月、生涯の温かな港ができた。
+              結婚。そして、千葉県船橋市に居を構える。
+            </p>
+            <p>
+              どんなに遠い国への出張から帰っても、灯りのともる我が家と、見慣れた船橋の街並みが栄を迎えてくれた。家族という碇（いかり）を得た栄は、ますます仕事に情熱を傾けていく。
+            </p>
+            <p>
+              時代は昭和から平成へと移り変わる。
+              平成十年（一九九八年）四月、六十歳を目前にした栄に新たな転属が訪れる。配属先は、それまで歩んできた水産の世界とは全く異なる「化学薬品専門商社」だった。
+            </p>
+            <p>
+              定年を意識する年齢での、畑違いの挑戦。しかし栄は怯まなかった。かつて若き日に見知らぬ異国へ飛び込んだ時のように、謙虚に新しい知識を学び、誠実に顧客と向き合い続けた。
+            </p>
+            <p>
+              そして平成二十一年（二○○九年）三月。激動の昭和、激変の平成を駆け抜け、七十歳を迎えた菊田栄は、誇りと感謝を胸に長きにわたるサラリーマン生活に終止符を打った。
+            </p>
+          </div>
+        </section>
+
+        <!-- 第四章 -->
+        <section class="space-y-4 pt-4 border-t border-journal-border">
+          <div class="flex items-baseline gap-3">
+            <span class="font-en text-2xl font-bold text-journal-earth">Chapter IV</span>
+            <h2 class="text-xl md:text-2xl font-serif font-bold text-journal-navy chapter-heading">
+              子どもたちの笑顔と、土のぬくもり
+            </h2>
+          </div>
+          
+          <div class="text-base md:text-[1.05rem] space-y-4 font-serif text-gray-800">
+            <p class="drop-cap">
+              半世紀に及ぶビジネスの第一線を退いた栄だったが、立ち止まることはなかった。退職した翌月、平成二十一年四月。栄の姿は、朝の通学路にあった。
+            </p>
+            <div class="bg-amber-50/80 border-l-4 border-amber-400 p-3 rounded text-journal-navy font-bold text-sm">
+              「おはよう！ 気をつけていってらっしゃい！」
+            </div>
+            <p>
+              葛飾小学校学区のスクールガードとして、黄色い旗を手に子どもたちの登下校を見守る日々。
+              かつて世界を相手に大きな商談を動かしていたその手で、今は小さな子どもたちの手を引き、地域社会の安全を守る。子どもたちの屈託のない笑顔と元気な挨拶が、第二の人生を歩む栄の何よりの活力となった。
+            </p>
+            <p>
+              さらに栄の探求心は、年齢を重ねても枯れることはなかった。
+              「大地に触れ、作物を育てる喜びを学びたい」と思い立ち、市民大学の園芸コースへの挑戦を決意する。しかし人気講座の壁は厚く、抽選や選考に落ちること三度。それでも諦めず、平成二十六年五月、栄は自ら「三浪の末」と笑って振り返る念願の合格を果たし、市民大学園芸1コースの門をくぐった。
+            </p>
+            <p>
+              土を耕し、種を蒔き、芽吹く命に寄り添う。海を相手にしてきた男が、今度は豊かな大地と向き合うこととなった。
+            </p>
+          </div>
+        </section>
+
+        <!-- 第五章 -->
+        <section class="space-y-4 pt-4 border-t border-journal-border">
+          <div class="flex items-baseline gap-3">
+            <span class="font-en text-2xl font-bold text-journal-navy">Chapter V</span>
+            <h2 class="text-xl md:text-2xl font-serif font-bold text-journal-navy chapter-heading">
+              今を生きる、生涯の学び舎
+            </h2>
+          </div>
+          
+          <div class="text-base md:text-[1.05rem] space-y-4 font-serif text-gray-800">
+            <p class="drop-cap">
+              園芸を通じて得た仲間たちとの絆は、栄の人生をいっそう色鮮やかなものにした。
+              平成二十七年春、学び舎の仲間たちとともに「菜園活動」をスタート。汗を流して収穫した野菜の味は格別だった。同時に「いきいき同窓会」の総務部として組織を支え、「歩こう会」で仲間たちと心地よい風を感じながら歩を進めた。
+            </p>
+            <p>
+              そして平成二十九年（二○一七年）四月、さらなる高みを目指して市民大学園芸2コースへと進学。栄は自らの略歴の最後に、茶目っ気と誇りを込めてこう記した。
+            </p>
+            
+            <blockquote class="my-3 p-4 bg-journal-sand border-l-4 border-journal-earth text-journal-navy font-serif font-bold text-base md:text-lg">
+              「市民大学園芸2入学 最終学歴となる」
+            </blockquote>
+
+            <p>
+              気仙沼の海で生まれ、戦後の焼け跡から立ち上がり、世界の海と街を駆け巡った男。
+              長年支えてくれた家族とともに暮らす船橋の地で、地域の子どもたちを見守り、仲間と大地を耕し、今日も笑顔で歩き続ける。
+            </p>
+            <p>
+              菊田栄の人生という名の物語は、いつの時代も決して色褪せることなく、土の香りと仲間の笑い声に包まれながら、今も温かく輝き続けている。
+            </p>
+          </div>
+        </section>
+
+      </article>
+
+      <!-- クロニクル年表 ＆ ライフヒストリー テーブル -->
+      <section class="space-y-6 pt-8 border-t-2 border-journal-border">
+        <div class="flex items-center justify-between">
+          <div class="space-y-1">
+            <span class="font-mono text-xs text-journal-gold uppercase tracking-widest">Chronological Table</span>
+            <h3 class="text-xl md:text-2xl font-serif font-bold text-journal-navy">
+              歩みの年表（1938 — 2017+）
+            </h3>
+          </div>
+          <div class="hidden sm:flex items-center gap-1.5 text-xs text-journal-muted font-mono">
+            <i data-lucide="history" class="w-4 h-4"></i>
+            <span>80+ Years Journey</span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm border-collapse bg-white rounded-lg overflow-hidden border border-journal-border shadow-sm">
+            <thead>
+              <tr class="bg-journal-sand text-journal-navy font-serif border-b border-journal-border">
+                <th class="py-3 px-4 font-bold w-24">年代 / 西暦</th>
+                <th class="py-3 px-4 font-bold w-36">主な出来事</th>
+                <th class="py-3 px-4 font-bold">足跡とマイルストーン</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-journal-border font-sans text-gray-700">
+              <tr class="hover:bg-journal-sand/40 transition">
+                <td class="py-3 px-4 font-mono font-bold text-journal-ocean">1938 (昭13)</td>
+                <td class="py-3 px-4 font-semibold text-journal-navy">気仙沼に生まれる</td>
+                <td class="py-3 px-4">宮城県気仙沼の港町に誕生。太平洋の青と漁師の声が最初の子守歌となる。</td>
+              </tr>
+              <tr class="hover:bg-journal-sand/40 transition">
+                <td class="py-3 px-4 font-mono font-bold text-journal-ocean">1945 (昭20)</td>
+                <td class="py-3 px-4 font-semibold text-journal-navy">終戦、そして希望</td>
+                <td class="py-3 px-4">国民学校「最後の入学生」として入学。8月15日の終戦を経て、激動の時代の中で新しい日本とともに育つ。</td>
+              </tr>
+              <tr class="hover:bg-journal-sand/40 transition">
+                <td class="py-3 px-4 font-mono font-bold text-journal-ocean">1957 (昭32)</td>
+                <td class="py-3 px-4 font-semibold text-journal-navy">上京、丸ビルへ</td>
+                <td class="py-3 px-4">気仙沼の水産高校を卒業し上京。旧丸ビルの水産専門商社で働きながら大学で学ぶ。「現場を知ることが信頼を生む」。</td>
+              </tr>
+              <tr class="hover:bg-journal-sand/40 transition">
+                <td class="py-3 px-4 font-mono font-bold text-journal-ocean">1961 (昭36)</td>
+                <td class="py-3 px-4 font-semibold text-journal-navy">正社員採用・台湾駐在</td>
+                <td class="py-3 px-4">大学卒業と同時に正式入社。入社半年で台湾駐在へ。20代で異国の地へ飛び込み挑戦を恐れぬ日々を送る。</td>
+              </tr>
+              <tr class="hover:bg-journal-sand/40 transition">
+                <td class="py-3 px-4 font-mono font-bold text-journal-ocean">1964 (昭39)</td>
+                <td class="py-3 px-4 font-semibold text-journal-navy">東南アジアを駆ける</td>
+                <td class="py-3 px-4">東京五輪の年に帰国、本社営業部へ。東南アジア全域を担当し日本の食卓とアジアの海をつなぐ。</td>
+              </tr>
+              <tr class="hover:bg-journal-sand/40 transition">
+                <td class="py-3 px-4 font-mono font-bold text-journal-gold">1966 (昭41)</td>
+                <td class="py-3 px-4 font-semibold text-journal-navy">結婚・船橋へ</td>
+                <td class="py-3 px-4">11月に結婚し千葉県船橋市に居を構える。家族が生涯の温かな港（碇）となる。</td>
+              </tr>
+              <tr class="hover:bg-journal-sand/40 transition">
+                <td class="py-3 px-4 font-mono font-bold text-journal-teal">1998 (平10)</td>
+                <td class="py-3 px-4 font-semibold text-journal-navy">畑違いの新領域へ</td>
+                <td class="py-3 px-4">60歳目前で化学薬品専門商社へ転属。未知の専門知識を謙虚に学び、誠実に歩む。</td>
+              </tr>
+              <tr class="hover:bg-journal-sand/40 transition">
+                <td class="py-3 px-4 font-mono font-bold text-journal-teal">2009 (平21)</td>
+                <td class="py-3 px-4 font-semibold text-journal-navy">定年退職とスクールガード</td>
+                <td class="py-3 px-4">70歳でサラリーマン生活に終止符。翌月より葛飾小学校学区のスクールガードを開始し、子どもたちの安全を見守る。</td>
+              </tr>
+              <tr class="hover:bg-journal-sand/40 transition">
+                <td class="py-3 px-4 font-mono font-bold text-journal-earth">2014 (平26)</td>
+                <td class="py-3 px-4 font-semibold text-journal-navy">市民大学園芸コース合格</td>
+                <td class="py-3 px-4">三度の挑戦を経て市民大学園芸1コースに合格。土に触れ、命を育てる喜びを知る。</td>
+              </tr>
+              <tr class="hover:bg-journal-sand/40 transition">
+                <td class="py-3 px-4 font-mono font-bold text-journal-earth">2015~ (平27~)</td>
+                <td class="py-3 px-4 font-semibold text-journal-navy">仲間とともに広がる輪</td>
+                <td class="py-3 px-4">菜園活動のスタート、「いきいき同窓会」総務部としての組織貢献、「歩こう会」で仲間と心身を育む。</td>
+              </tr>
+              <tr class="hover:bg-journal-sand/40 transition">
+                <td class="py-3 px-4 font-mono font-bold text-journal-earth">2017 (平29)</td>
+                <td class="py-3 px-4 font-semibold text-journal-navy">園芸2コース進学</td>
+                <td class="py-3 px-4">「市民大学園芸2入学 最終学歴となる」と誇りを込め進学。学びに終わりなき人生を体現。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 未来への展開（海から世界へ、そして地域・自然へ） -->
+      <section class="bg-journal-sand border border-journal-border rounded-xl p-6 md:p-8 space-y-6">
+        <div class="text-center space-y-2">
+          <span class="text-xs font-mono text-journal-gold uppercase tracking-widest">Life Journey Flow</span>
+          <h3 class="text-xl md:text-2xl font-serif font-bold text-journal-navy">
+            未来へつなぐ、人生の展開
+          </h3>
+          <p class="text-xs md:text-sm text-gray-600">
+            海から世界へ、そして地域へ。人と自然と未来をつなぐ豊かな土壌をつくるために。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 text-center">
+          <div class="bg-white p-3.5 rounded-lg border border-journal-border flex flex-col items-center justify-center space-y-1">
+            <span class="text-xs font-mono text-journal-ocean font-bold">STAGE 01</span>
+            <span class="text-base font-serif font-bold text-journal-navy">仕事</span>
+            <span class="text-[11px] text-gray-500">海から世界へ</span>
+          </div>
+          <div class="bg-white p-3.5 rounded-lg border border-journal-border flex flex-col items-center justify-center space-y-1">
+            <span class="text-xs font-mono text-journal-gold font-bold">STAGE 02</span>
+            <span class="text-base font-serif font-bold text-journal-navy">家族</span>
+            <span class="text-[11px] text-gray-500">人生の港・船橋</span>
+          </div>
+          <div class="bg-white p-3.5 rounded-lg border border-journal-border flex flex-col items-center justify-center space-y-1">
+            <span class="text-xs font-mono text-journal-teal font-bold">STAGE 03</span>
+            <span class="text-base font-serif font-bold text-journal-navy">地域</span>
+            <span class="text-[11px] text-gray-500">見守りと貢献</span>
+          </div>
+          <div class="bg-white p-3.5 rounded-lg border border-journal-border flex flex-col items-center justify-center space-y-1">
+            <span class="text-xs font-mono text-journal-earth font-bold">STAGE 04</span>
+            <span class="text-base font-serif font-bold text-journal-navy">自然</span>
+            <span class="text-[11px] text-gray-500">土と命の探求</span>
+          </div>
+          <div class="col-span-2 sm:col-span-1 bg-journal-navy text-white p-3.5 rounded-lg flex flex-col items-center justify-center space-y-1">
+            <span class="text-xs font-mono text-journal-gold font-bold">STAGE 05</span>
+            <span class="text-base font-serif font-bold">未来へ</span>
+            <span class="text-[11px] text-journal-sand">次世代への継承</span>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-journal-border flex flex-wrap items-center justify-around gap-4 text-xs md:text-sm font-serif text-journal-navy">
+          <div class="flex items-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4 text-journal-gold"></i>
+            <span><strong>貢献：</strong> 誰かの笑顔のために</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="users" class="w-4 h-4 text-journal-ocean"></i>
+            <span><strong>仲間：</strong> ともに歩き、汗を流す</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i data-lucide="sprout" class="w-4 h-4 text-journal-earth"></i>
+            <span><strong>継承：</strong> 豊かな土壌を次世代へ</span>
+          </div>
+        </div>
+
+        <div class="text-center pt-2">
+          <p class="text-sm md:text-base font-serif font-bold text-journal-ocean">
+            「ありがとうの心を胸に、これからも歩き続けます。今日も、笑顔で、一歩ずつ。」
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    // Lucide Icons 初期化
+    lucide.createIcons();
+  </script>
+</body>
+</html>
