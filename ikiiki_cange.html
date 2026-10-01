@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>船橋市いきいき同窓会 持続可能な組織への転換 ― 会員減少への対応と次の成長モデル</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Noto Serif JP (明朝・見出し/キー引用) & Noto Sans JP (本文) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@500;600;700;900&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons for visual diagrams -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Noto Serif JP"', 'serif'],
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          },
+          colors: {
+            academic: {
+              navy: '#0f233a',
+              slate: '#334155',
+              muted: '#64748b',
+              accent: '#0369a1',
+              accentLight: '#e0f2fe',
+              paper: '#fcfdfd',
+              border: '#e2e8f0',
+              highlight: '#0284c7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f8fafc;
+      color: #1e293b;
+      -webkit-font-smoothing: antialiased;
+    }
+    .paper-texture {
+      background-color: #ffffff;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+    }
+    .academic-quote {
+      position: relative;
+    }
+    .academic-quote::before {
+      content: "“";
+      font-family: serif;
+      position: absolute;
+      top: -10px;
+      left: 12px;
+      font-size: 3rem;
+      color: #cbd5e1;
+      line-height: 1;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="font-sans py-12 px-4 sm:px-6 lg:px-8">
+
+  <!-- メイン論文コンテナ (ヘッダー・フッターなし、純粋なドキュメント完結構造) -->
+  <main class="max-w-4xl mx-auto paper-texture border border-slate-200/80 rounded-sm p-8 sm:p-12 lg:p-16">
+
+    <!-- 学術ジャーナル・メタ情報バナー -->
+    <header class="border-b-2 border-slate-900 pb-8 mb-10">
+      <div class="flex flex-wrap justify-between items-baseline text-xs text-slate-500 font-mono tracking-wider mb-4 border-b border-slate-100 pb-2">
+        <span>JOURNAL OF COMMUNITY GOVERNANCE &amp; LIFELONG LEARNING</span>
+        <span>RESEARCH REPORT | SPECIAL EDITION</span>
+      </div>
+
+      <div class="space-y-3">
+        <span class="inline-block px-2.5 py-1 text-xs font-semibold bg-sky-50 text-sky-800 border border-sky-200 rounded-sm">
+          組織改革・自治モデル実証研究
+        </span>
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-serif font-black text-slate-900 leading-tight tracking-tight">
+          「船橋市いきいき同窓会」持続可能な組織への転換
+        </h1>
+        <p class="text-lg sm:text-xl font-serif text-slate-600 font-medium">
+          ― 会員減少への対応と次の成長モデル ―
+        </p>
+      </div>
+
+      <!-- 著者・所属・日付メタデータ -->
+      <div class="mt-6 pt-4 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-600">
+        <div>
+          <span class="block text-slate-400 font-medium uppercase text-[10px] tracking-wider">対象組織</span>
+          <span class="font-semibold text-slate-800">船橋市いきいき同窓会 理事会・運営組織</span>
+        </div>
+        <div>
+          <span class="block text-slate-400 font-medium uppercase text-[10px] tracking-wider">分析視座</span>
+          <span class="font-semibold text-slate-800">シニアコミュニティ経営・地域プラットフォーム論</span>
+        </div>
+        <div>
+          <span class="block text-slate-400 font-medium uppercase text-[10px] tracking-wider">基準年次 / レファレンス</span>
+          <span class="font-semibold text-slate-800">2025–2026年度 決算・事業改革期</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- エグゼクティブサマリー / 要約 -->
+    <section class="mb-12 bg-slate-50 border-l-4 border-slate-800 p-6 sm:p-7 rounded-r">
+      <h2 class="text-xs font-bold tracking-widest text-slate-500 uppercase mb-2 font-mono flex items-center gap-1.5">
+        <i class="fa-solid fa-compass text-sky-700"></i> Executive Summary / 要約
+      </h2>
+      <p class="text-slate-800 font-serif leading-relaxed text-sm sm:text-base font-medium mb-4">
+        本稿は、会員規模2,000人超から596人へと縮小した「船橋市いきいき同窓会」が直面する課題を、単なる「会員募集の停滞」ではなく、
+        <strong class="text-slate-950 underline decoration-sky-500 decoration-2">「従来型同窓会モデルが環境変化に合致しなくなった結果としての経営持続性の危機」</strong>
+        と再定義する。危機感を徒に煽るのではなく、シニアの活動意欲そのものは消退していないという実態に即し、
+        「卒業生を囲い込む単一組織」から「市民・地域・多様な活動を媒介するコミュニティ・プラットフォーム」へのパラダイムシフトを提唱。
+        参加ファネルの設計、事業ポートフォリオの3軸評価、事務DXを通じた資源再配分、ならびに12か月間の改革ロードマップを提示する。
+      </p>
+      <div class="flex flex-wrap gap-2 text-xs">
+        <span class="text-slate-500 font-medium self-center">キーワード:</span>
+        <span class="bg-white px-2 py-0.5 border border-slate-200 rounded text-slate-700">コミュニティ・プラットフォーム</span>
+        <span class="bg-white px-2 py-0.5 border border-slate-200 rounded text-slate-700">組織モデル転換</span>
+        <span class="bg-white px-2 py-0.5 border border-slate-200 rounded text-slate-700">参加ファネル</span>
+        <span class="bg-white px-2 py-0.5 border border-slate-200 rounded text-slate-700">事業ポートフォリオ</span>
+        <span class="bg-white px-2 py-0.5 border border-slate-200 rounded text-slate-700">行政・市民大学校連携</span>
+      </div>
+    </section>
+
+    <!-- 第1章: 課題の本質定義 -->
+    <section class="mb-14">
+      <div class="border-b border-slate-200 pb-2 mb-6">
+        <span class="text-xs font-mono font-bold text-sky-700 tracking-wider">SECTION 01</span>
+        <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 mt-1">
+          いま問われているのは「会員を増やすこと」だけではない
+        </h2>
+      </div>
+
+      <!-- キーメッセージ強調ボックス -->
+      <div class="academic-quote bg-sky-50/70 border border-sky-100 rounded p-6 mb-6">
+        <p class="text-xs font-bold text-sky-800 uppercase tracking-widest mb-1 pl-4">Key Proposition</p>
+        <p class="text-base sm:text-lg font-serif font-bold text-slate-900 leading-snug pl-4">
+          会員減少は“問題そのもの”ではなく、従来型の同窓会モデルが環境変化に合わなくなった結果である。
+        </p>
+      </div>
+
+      <div class="prose text-slate-700 text-sm sm:text-base leading-relaxed space-y-4 mb-6">
+        <p>
+          かつて2,000人を超える規模を誇った組織が、2025年度には会員596人へと縮小した。この現象を捉える際、最も避けるべきは「どうすれば会員を増やせるか」という対症療法的な募集論から議論を始めることである。
+          会員減少は独立した事象ではなく、構造的な負のループの結実である。
+        </p>
+      </div>
+
+      <!-- 構造的図解カード: 負の循環モデル -->
+      <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 my-6">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4 font-mono text-center">
+          FIGURE 1: 会員減少の連鎖構造（組織的負のループ）
+        </h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 text-center mb-6">
+          <div class="bg-white p-4 rounded border border-slate-200 shadow-sm">
+            <span class="text-xs font-semibold text-rose-600 block mb-1">Result</span>
+            <div class="text-lg font-bold text-slate-900">会員減少</div>
+            <p class="text-xs text-slate-500 mt-1">596人（目標割れ）</p>
+          </div>
+          <div class="bg-white p-4 rounded border border-slate-200 shadow-sm">
+            <span class="text-xs font-semibold text-amber-600 block mb-1">Impact 1</span>
+            <div class="text-lg font-bold text-slate-900">財政・担い手縮小</div>
+            <p class="text-xs text-slate-500 mt-1">会費減衰・役員固定化</p>
+          </div>
+          <div class="bg-white p-4 rounded border border-slate-200 shadow-sm">
+            <span class="text-xs font-semibold text-amber-600 block mb-1">Impact 2</span>
+            <div class="text-lg font-bold text-slate-900">運営負担の肥大</div>
+            <p class="text-xs text-slate-500 mt-1">従来行事維持の疲弊</p>
+          </div>
+          <div class="bg-white p-4 rounded border border-slate-200 shadow-sm">
+            <span class="text-xs font-semibold text-rose-600 block mb-1">Impact 3</span>
+            <div class="text-lg font-bold text-slate-900">魅力・吸引力の低下</div>
+            <p class="text-xs text-slate-500 mt-1">新規参入の忌避</p>
+          </div>
+        </div>
+
+        <div class="bg-rose-50 border border-rose-200 text-rose-900 text-sm p-4 rounded flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation text-rose-600"></i>
+            <span class="font-bold">戦略的示唆：</span>
+            <span>ポスター増刷や単純な募集強化では、この循環を断ち切ることはできない。</span>
+          </div>
+          <span class="text-xs font-bold bg-white text-rose-700 px-3 py-1 border border-rose-200 rounded">組織・活動の再設計へ</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第2章: 会員問題から経営持続性危機への拡大 -->
+    <section class="mb-14">
+      <div class="border-b border-slate-200 pb-2 mb-6">
+        <span class="text-xs font-mono font-bold text-sky-700 tracking-wider">SECTION 02</span>
+        <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 mt-1">
+          危機はすでに「会員数」から「経営持続性」へ広がっている
+        </h2>
+      </div>
+
+      <div class="academic-quote bg-sky-50/70 border border-sky-100 rounded p-6 mb-6">
+        <p class="text-xs font-bold text-sky-800 uppercase tracking-widest mb-1 pl-4">Key Proposition</p>
+        <p class="text-base sm:text-lg font-serif font-bold text-slate-900 leading-snug pl-4">
+          会員減少への対応は、もはや会員増強策ではなく“経営改革”として扱う段階にある。
+        </p>
+      </div>
+
+      <div class="prose text-slate-700 text-sm sm:text-base leading-relaxed space-y-4 mb-6">
+        <p>
+          2025年5月時点で確認された会員数596人は、予算編成時の目標値660人を下回る結果となった。続く2026年6月の理事会討議においては、<strong>「2026年度末における積立金枯渇」</strong>という深刻な財政シナリオが共有されている。
+          これに伴い、伝統的な基幹3事業（体育祭・芸能大会・作品展）に対しても「ゼロベースでの見直し」が着手された。
+        </p>
+      </div>
+
+      <!-- 3段階プロセスカード -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="bg-white border border-slate-200 p-5 rounded">
+          <div class="text-xs font-mono text-slate-400 font-bold mb-1">PHASE 01</div>
+          <h4 class="font-bold text-slate-900 text-base mb-2">会員規模の縮小</h4>
+          <p class="text-xs text-slate-600 leading-normal">
+            自然減および新卒業生の入会率低下に伴い、長年維持された規模基盤が瓦解。
+          </p>
+        </div>
+        <div class="bg-white border border-slate-200 p-5 rounded">
+          <div class="text-xs font-mono text-slate-400 font-bold mb-1">PHASE 02</div>
+          <h4 class="font-bold text-slate-900 text-base mb-2">収入減少と担い手不足</h4>
+          <p class="text-xs text-slate-600 leading-normal">
+            会費収入の減少に対し、広報・郵送・会場費等の固定費負担が重くのしかかる。
+          </p>
+        </div>
+        <div class="bg-rose-50/80 border border-rose-200 p-5 rounded">
+          <div class="text-xs font-mono text-rose-600 font-bold mb-1">PHASE 03</div>
+          <h4 class="font-bold text-rose-950 text-base mb-2">事業継続性の危機</h4>
+          <p class="text-xs text-rose-800 leading-normal">
+            積立金の底付きが現実味を帯び、従来型行事の維持自体が不可能となる局面へ突入。
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 bg-slate-900 text-white rounded text-xs sm:text-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+        <span class="font-medium">視座の転換：「会員募集担当の課題」から「役員・経営陣全体の構造改革」へ</span>
+        <span class="text-sky-300 font-mono text-xs font-semibold">GOVERNANCE LEVEL TRANSFORMATION</span>
+      </div>
+    </section>
+
+    <!-- 第3章: 前提条件の崩壊と新モデル -->
+    <section class="mb-14">
+      <div class="border-b border-slate-200 pb-2 mb-6">
+        <span class="text-xs font-mono font-bold text-sky-700 tracking-wider">SECTION 03</span>
+        <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 mt-1">
+          最大の構造問題は「卒業生＝自動的に会員」という前提の崩壊
+        </h2>
+      </div>
+
+      <div class="academic-quote bg-sky-50/70 border border-sky-100 rounded p-6 mb-6">
+        <p class="text-xs font-bold text-sky-800 uppercase tracking-widest mb-1 pl-4">Key Proposition</p>
+        <p class="text-base sm:text-lg font-serif font-bold text-slate-900 leading-snug pl-4">
+          従来の“卒業→入会→活動”という一本道モデルでは、次世代の会員を獲得できなくなっている。
+        </p>
+      </div>
+
+      <div class="prose text-slate-700 text-sm sm:text-base leading-relaxed space-y-4 mb-6">
+        <p>
+          ふなばし市民大学校は現在も「学ぶ・活かす・つながる」を標榜し、意欲的なシニア市民が集う場であり続けている。
+          しかし、多様な地域活動やサークル、オンラインコミュニティが存在する今日において、「卒業したから同窓会に所属する」という動機はもはや自明ではない。
+        </p>
+      </div>
+
+      <!-- モデル対比テーブル / 比較カード -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <!-- 従来モデル -->
+        <div class="bg-slate-50 border border-slate-200 rounded p-5">
+          <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 font-mono">CONVENTIONAL MODEL</div>
+          <h4 class="font-serif font-bold text-slate-900 text-base mb-3">制度依存の一本道モデル</h4>
+          <ol class="space-y-2 text-xs sm:text-sm text-slate-600 list-decimal list-inside border-l-2 border-slate-300 pl-2">
+            <li>市民大学校の修了</li>
+            <li>同窓会への自動的／義務的入会</li>
+            <li>既存定例行事・同好会への参加</li>
+          </ol>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-xs text-rose-700 font-medium">
+            課題：選択肢が増えた現代シニアには「所属する理由」が伝わらない。
+          </div>
+        </div>
+
+        <!-- 新モデル -->
+        <div class="bg-sky-50/50 border border-sky-200 rounded p-5">
+          <div class="text-xs font-bold text-sky-800 uppercase tracking-wider mb-2 font-mono">EMERGING MODEL</div>
+          <h4 class="font-serif font-bold text-slate-900 text-base mb-3">多層的エンゲージメントモデル</h4>
+          <div class="space-y-2 text-xs sm:text-sm text-slate-700">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-sky-600 text-white text-[10px] flex items-center justify-center font-bold">1</span>
+              <span>多様な入口：趣味、学び、イベント、地域貢献</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-sky-600 text-white text-[10px] flex items-center justify-center font-bold">2</span>
+              <span>気軽な参加：敷居の低い体験と人間関係の形成</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-sky-600 text-white text-[10px] flex items-center justify-center font-bold">3</span>
+              <span>自然な定着：納得と愛着に基づく会員化</span>
+            </div>
+          </div>
+          <div class="mt-4 pt-3 border-t border-sky-100 text-xs text-sky-800 font-semibold">
+            方針：関心の芽から関係性を育み、最終的に組織参加へと結実させる。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第4章: 活動ポートフォリオの再設計 -->
+    <section class="mb-14">
+      <div class="border-b border-slate-200 pb-2 mb-6">
+        <span class="text-xs font-mono font-bold text-sky-700 tracking-wider">SECTION 04</span>
+        <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 mt-1">
+          需要が消えたのではない。「選ばれる活動」が変わっている
+        </h2>
+      </div>
+
+      <div class="academic-quote bg-sky-50/70 border border-sky-100 rounded p-6 mb-6">
+        <p class="text-xs font-bold text-sky-800 uppercase tracking-widest mb-1 pl-4">Key Proposition</p>
+        <p class="text-base sm:text-lg font-serif font-bold text-slate-900 leading-snug pl-4">
+          会員減少＝シニアの活動意欲低下ではない。参加したい活動と従来事業とのミスマッチが起きている。
+        </p>
+      </div>
+
+      <div class="prose text-slate-700 text-sm sm:text-base leading-relaxed space-y-4 mb-6">
+        <p>
+          同窓会内部において健康や文化、交流の各部会・同好会は依然として精力的に活動している。
+          乖離が生じているのは、一部の「形式化・硬直化した伝統的大型行事」と「現代のシニアが個別に求める機動的・個人的な関心領域」との間である。
+          問われているのは活動量ではなく、<strong>「事業ポートフォリオの適正化」</strong>である。
+        </p>
+      </div>
+
+      <!-- 2×2 マトリクスカード -->
+      <div class="border border-slate-200 rounded-lg p-6 bg-slate-50/50 my-6">
+        <div class="text-center mb-4">
+          <span class="text-xs font-mono font-bold text-slate-500 uppercase">MATRIX: 事業ポートフォリオ評価フレームワーク</span>
+          <p class="text-xs text-slate-400">（縦軸：現在の参加ニーズ ／ 横軸：組織の将来性）</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- 象限1: 育てる -->
+          <div class="bg-white border-t-4 border-sky-600 p-4 rounded shadow-sm">
+            <div class="flex justify-between items-center mb-1">
+              <h4 class="font-bold text-slate-900 text-sm sm:text-base">重点投資・育成象限</h4>
+              <span class="text-[10px] bg-sky-100 text-sky-800 font-bold px-2 py-0.5 rounded">高ニーズ × 高将来性</span>
+            </div>
+            <p class="text-xs text-slate-600 mb-2">健康延伸、デジタル活用、人気の高い文化同好会</p>
+            <p class="text-xs text-sky-900 font-medium">方針：予算・広報枠を最優先配分し、新規層の受け皿とする。</p>
+          </div>
+
+          <!-- 象限2: 継続する -->
+          <div class="bg-white border-t-4 border-emerald-600 p-4 rounded shadow-sm">
+            <div class="flex justify-between items-center mb-1">
+              <h4 class="font-bold text-slate-900 text-sm sm:text-base">安定維持・効率化象限</h4>
+              <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">高ニーズ × 低将来性</span>
+            </div>
+            <p class="text-xs text-slate-600 mb-2">既存会員の定例交流会、コア同好会活動</p>
+            <p class="text-xs text-emerald-900 font-medium">方針：過度な拡大は追わず、事務負担の軽減を図りながら維持。</p>
+          </div>
+
+          <!-- 象限3: 再設計する -->
+          <div class="bg-white border-t-4 border-amber-600 p-4 rounded shadow-sm">
+            <div class="flex justify-between items-center mb-1">
+              <h4 class="font-bold text-slate-900 text-sm sm:text-base">抜本的再設計象限</h4>
+              <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">低ニーズ × 高将来性</span>
+            </div>
+            <p class="text-xs text-slate-600 mb-2">伝統行事（体育祭・作品展など）の市民開放型アレンジ</p>
+            <p class="text-xs text-amber-900 font-medium">方針：単一の大会形式から、小規模・ワークショップ型へ変革。</p>
+          </div>
+
+          <!-- 象限4: 終了・統合 -->
+          <div class="bg-white border-t-4 border-slate-400 p-4 rounded shadow-sm">
+            <div class="flex justify-between items-center mb-1">
+              <h4 class="font-bold text-slate-900 text-sm sm:text-base">統廃合・役割完了象限</h4>
+              <span class="text-[10px] bg-slate-200 text-slate-700 font-bold px-2 py-0.5 rounded">低ニーズ × 低将来性</span>
+            </div>
+            <p class="text-xs text-slate-600 mb-2">参加者固定化かつ役員負担が過大な旧来事業</p>
+            <p class="text-xs text-slate-700 font-medium">方針：前年踏襲を排し、発展的解消または他事業へ統合。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第5章: 2026年度 始動している改革の6本柱 -->
+    <section class="mb-14">
+      <div class="border-b border-slate-200 pb-2 mb-6">
+        <span class="text-xs font-mono font-bold text-sky-700 tracking-wider">SECTION 05</span>
+        <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 mt-1">
+          改革はすでに始まっている：2026年度の転換項目
+        </h2>
+      </div>
+
+      <div class="academic-quote bg-sky-50/70 border border-sky-100 rounded p-6 mb-6">
+        <p class="text-xs font-bold text-sky-800 uppercase tracking-widest mb-1 pl-4">Key Proposition</p>
+        <p class="text-base sm:text-lg font-serif font-bold text-slate-900 leading-snug pl-4">
+          2026年度の方針は、部分改善ではなく「組織モデル転換」に踏み込み始めている。
+        </p>
+      </div>
+
+      <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
+        幸いにも、いきいき同窓会執行部はすでに危機の本質を察知し、実践的な検討を進めている。
+        求められているのは突飛な外来アイデアではなく、すでに浮上している個別の施策群を一つの強固な戦略軸に束ね、優先順位をもって遂行することである。
+      </p>
+
+      <!-- 6枚のカード配置 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="border border-slate-200 rounded p-4 bg-white hover:border-slate-300 transition-colors">
+          <div class="flex items-center gap-2 mb-2 text-sky-700 font-bold text-xs uppercase font-mono">
+            <i class="fa-solid fa-users"></i> 01. 対象拡大
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">入会資格の柔軟化</h4>
+          <p class="text-xs text-slate-600">市民大学校卒業生のみに限定せず、地域で学びたい一般市民へ門戸を開放。</p>
+        </div>
+
+        <div class="border border-slate-200 rounded p-4 bg-white hover:border-slate-300 transition-colors">
+          <div class="flex items-center gap-2 mb-2 text-sky-700 font-bold text-xs uppercase font-mono">
+            <i class="fa-solid fa-ticket"></i> 02. 参加制度
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">イベント限定賛助会員</h4>
+          <p class="text-xs text-slate-600">通年正会員だけでなく、特定企画や単発行事に参加できる弾力的な準会員枠の設置。</p>
+        </div>
+
+        <div class="border border-slate-200 rounded p-4 bg-white hover:border-slate-300 transition-colors">
+          <div class="flex items-center gap-2 mb-2 text-sky-700 font-bold text-xs uppercase font-mono">
+            <i class="fa-solid fa-arrows-rotate"></i> 03. 活動改革
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">主要3行事のゼロベース化</h4>
+          <p class="text-xs text-slate-600">体育祭・芸能大会・作品展の規模、頻度、実施形式を根本から見直し負荷軽減。</p>
+        </div>
+
+        <div class="border border-slate-200 rounded p-4 bg-white hover:border-slate-300 transition-colors">
+          <div class="flex items-center gap-2 mb-2 text-sky-700 font-bold text-xs uppercase font-mono">
+            <i class="fa-solid fa-sitemap"></i> 04. 組織改革
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">運営委員会への移行</h4>
+          <p class="text-xs text-slate-600">過重な理事会構造のスリム化と意思決定の迅速化、役員個人の精神的・実務的負担の緩和。</p>
+        </div>
+
+        <div class="border border-slate-200 rounded p-4 bg-white hover:border-slate-300 transition-colors">
+          <div class="flex items-center gap-2 mb-2 text-sky-700 font-bold text-xs uppercase font-mono">
+            <i class="fa-solid fa-laptop-code"></i> 05. DX推進
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">デジタル・ハイブリッド</h4>
+          <p class="text-xs text-slate-600">HP・LINEによる連絡、Web参加申込、広報の内製化と名簿データベースの一元化。</p>
+        </div>
+
+        <div class="border border-slate-200 rounded p-4 bg-white hover:border-slate-300 transition-colors">
+          <div class="flex items-center gap-2 mb-2 text-sky-700 font-bold text-xs uppercase font-mono">
+            <i class="fa-solid fa-coins"></i> 06. 財政改革
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm mb-1">郵送費・固定費の圧縮</h4>
+          <p class="text-xs text-slate-600">会報郵送の電子化による通信運搬費の激減、外部委託費の内製化による損益改善。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第6章: 目指すべき姿（地域コミュニティ・プラットフォーム） -->
+    <section class="mb-14">
+      <div class="border-b border-slate-200 pb-2 mb-6">
+        <span class="text-xs font-mono font-bold text-sky-700 tracking-wider">SECTION 06</span>
+        <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 mt-1">
+          目指す姿：「同窓会」から「地域コミュニティ・プラットフォーム」へ
+        </h2>
+      </div>
+
+      <div class="academic-quote bg-sky-50/70 border border-sky-100 rounded p-6 mb-6">
+        <p class="text-xs font-bold text-sky-800 uppercase tracking-widest mb-1 pl-4">Core Strategic Anchor</p>
+        <p class="text-base sm:text-lg font-serif font-bold text-slate-900 leading-snug pl-4">
+          組織の価値を「卒業生を管理すること」から「人と活動をつなぐこと」へ転換する。
+        </p>
+      </div>
+
+      <div class="prose text-slate-700 text-sm sm:text-base leading-relaxed space-y-4 mb-6">
+        <p>
+          本改革提案の核心は「いきいき同窓会という名称を捨てること」ではない。組織が果たす役割の定義を、
+          <strong>「内向きの卒業生相互扶助組織」から「地域住民、行政、市民大学校、同好会を接続するオープン・ハブ」</strong>
+          へと拡張することにある。これは市民大学校が長年標榜してきた「学ぶ・活かす・つながる」という理念の実践的な社会実装でもある。
+        </p>
+      </div>
+
+      <!-- プラットフォーム構想図解 -->
+      <div class="bg-slate-900 text-slate-100 p-8 rounded-lg shadow-inner my-6">
+        <div class="text-center max-w-md mx-auto mb-8">
+          <span class="text-xs font-mono text-sky-400 tracking-widest uppercase">CONCEPT ARCHITECTURE</span>
+          <div class="mt-2 text-xl font-bold font-serif text-white tracking-wide border-b border-slate-700 pb-2">
+            いきいき地域プラットフォーム
+          </div>
+          <p class="text-xs text-slate-400 mt-2">
+            「会員を囲い込む」閉鎖型から、「人と多様な資源をつなぎ直す」媒介型へ
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs">
+          <div class="bg-slate-800/80 p-3 rounded border border-slate-700">
+            <i class="fa-solid fa-graduation-cap text-sky-400 text-lg mb-1 block"></i>
+            <span class="font-bold">ふなばし市民大学校</span>
+            <p class="text-[11px] text-slate-400 mt-1">学びの原点・人材輩出</p>
+          </div>
+          <div class="bg-slate-800/80 p-3 rounded border border-slate-700">
+            <i class="fa-solid fa-landmark text-sky-400 text-lg mb-1 block"></i>
+            <span class="font-bold">行政・社会福祉協議会</span>
+            <p class="text-[11px] text-slate-400 mt-1">地域課題・公共協働</p>
+          </div>
+          <div class="bg-slate-800/80 p-3 rounded border border-slate-700">
+            <i class="fa-solid fa-palette text-sky-400 text-lg mb-1 block"></i>
+            <span class="font-bold">各種同好会・サークル</span>
+            <p class="text-[11px] text-slate-400 mt-1">趣味・健康・文化活動</p>
+          </div>
+          <div class="bg-slate-800/80 p-3 rounded border border-slate-700">
+            <i class="fa-solid fa-hand-holding-heart text-sky-400 text-lg mb-1 block"></i>
+            <span class="font-bold">地域市民・企業・ボランティア</span>
+            <p class="text-[11px] text-slate-400 mt-1">自己実現・新たな担い手</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第7章: 参加ファネルの設計 -->
+    <section class="mb-14">
+      <div class="border-b border-slate-200 pb-2 mb-6">
+        <span class="text-xs font-mono font-bold text-sky-700 tracking-wider">SECTION 07</span>
+        <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 mt-1">
+          会員獲得は「募集」ではなく「参加ファネル」で設計する
+        </h2>
+      </div>
+
+      <div class="academic-quote bg-sky-50/70 border border-sky-100 rounded p-6 mb-6">
+        <p class="text-xs font-bold text-sky-800 uppercase tracking-widest mb-1 pl-4">Key Proposition</p>
+        <p class="text-base sm:text-lg font-serif font-bold text-slate-900 leading-snug pl-4">
+          最初から入会を求めず、「知る→試す→つながる→参加する→会員になる」の段階設計に変える。
+        </p>
+      </div>
+
+      <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
+        面識のない組織にいきなり年会費を払って所属することには心理的摩擦が伴う。
+        マーケティングのファネル概念をシニア組織に適合させ、ハードルの低い接点から段階的にエンゲージメントを高める動線を構築する。
+      </p>
+
+      <!-- ファネル・ステップテーブル -->
+      <div class="border border-slate-200 rounded-lg overflow-hidden my-6">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-100 border-b border-slate-200 text-slate-700 uppercase font-mono">
+            <tr>
+              <th class="py-3 px-4 w-28">段階</th>
+              <th class="py-3 px-4">具体的手法・タッチポイント</th>
+              <th class="py-3 px-4 w-32 text-right">目標KPI（年換算）</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-slate-900">1. 認知</td>
+              <td class="py-3 px-4 text-slate-600">地域広報紙、公共施設チラシ、Webサイト、口コミ告知</td>
+              <td class="py-3 px-4 text-right font-mono font-bold text-slate-800">1,000名</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-sky-50/30">
+              <td class="py-3 px-4 font-bold text-sky-900">2. 体験</td>
+              <td class="py-3 px-4 text-slate-600">無料体験講座、オープン健康体操、ワンコイン市民公開セミナー</td>
+              <td class="py-3 px-4 text-right font-mono font-bold text-sky-800">300名</td>
+            </tr>
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-bold text-slate-900">3. 継続接点</td>
+              <td class="py-3 px-4 text-slate-600">公式LINE登録、メールマガジン、イベント限定「賛助会員」登録</td>
+              <td class="py-3 px-4 text-right font-mono font-bold text-slate-800">150名</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-sky-50/30">
+              <td class="py-3 px-4 font-bold text-sky-900">4. 活動定着</td>
+              <td class="py-3 px-4 text-slate-600">特定同好会への継続的参加、友人・知人関係の醸成</td>
+              <td class="py-3 px-4 text-right font-mono font-bold text-sky-800">100名</td>
+            </tr>
+            <tr class="hover:bg-slate-50 bg-sky-100/50">
+              <td class="py-3 px-4 font-bold text-sky-950">5. 正式入会</td>
+              <td class="py-3 px-4 text-slate-800 font-medium">納得感と帰属意識に基づく同窓会本会員への登録・運営参画</td>
+              <td class="py-3 px-4 text-right font-mono font-bold text-sky-950">50名</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 第8章: 事業見直しの客観的評価基準 -->
+    <section class="mb-14">
+      <div class="border-b border-slate-200 pb-2 mb-6">
+        <span class="text-xs font-mono font-bold text-sky-700 tracking-wider">SECTION 08</span>
+        <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 mt-1">
+          「全部残す」でも「全部やめる」でもない事業評価
+        </h2>
+      </div>
+
+      <div class="academic-quote bg-sky-50/70 border border-sky-100 rounded p-6 mb-6">
+        <p class="text-xs font-bold text-sky-800 uppercase tracking-widest mb-1 pl-4">Key Proposition</p>
+        <p class="text-base sm:text-lg font-serif font-bold text-slate-900 leading-snug pl-4">
+          伝統を守るためにも、事業は「継続・変革・統合・終了」に分ける必要がある。
+        </p>
+      </div>
+
+      <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
+        歴史的行事の扱いは最も感情的対立を生みやすい。感情論や単なる多数決を回避するため、
+        「参加者価値」「運営負担」「将来性」の3次元による客観的スコアリングを意思決定の共通言語とする。
+      </p>
+
+      <!-- 3軸評価カード -->
+      <div class="bg-white border border-slate-200 rounded p-6 my-6">
+        <h4 class="text-xs font-mono font-bold text-slate-500 uppercase mb-4">TRI-AXIAL EVALUATION CRITERIA</h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="border-l-2 border-sky-600 pl-4">
+            <span class="text-xs font-bold text-sky-800 block">AXIS 1</span>
+            <div class="text-base font-bold text-slate-900 my-1">参加者価値</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              参加者の満足度、学びや健康増進の実効性、他者との交流深化度合い。
+            </p>
+          </div>
+          <div class="border-l-2 border-amber-600 pl-4">
+            <span class="text-xs font-bold text-amber-800 block">AXIS 2</span>
+            <div class="text-base font-bold text-slate-900 my-1">運営負担</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              役員・ボランティアの拘束時間、身体的・精神的疲弊度、必要予算規模。
+            </p>
+          </div>
+          <div class="border-l-2 border-emerald-600 pl-4">
+            <span class="text-xs font-bold text-emerald-800 block">AXIS 3</span>
+            <div class="text-base font-bold text-slate-900 my-1">将来性・波及力</div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              新規層や若手シニアの誘引力、次世代の役員・担い手育成につながるか。
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-slate-100 flex flex-wrap gap-2 text-xs">
+          <span class="bg-emerald-50 text-emerald-800 border border-emerald-200 px-3 py-1 rounded font-medium">伸ばす（資源集中）</span>
+          <span class="bg-sky-50 text-sky-800 border border-sky-200 px-3 py-1 rounded font-medium">残す（現状効率化）</span>
+          <span class="bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded font-medium">変える（小規模・協働化）</span>
+          <span class="bg-slate-100 text-slate-700 border border-slate-200 px-3 py-1 rounded font-medium">統合・終了（発展的解消）</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第9章: DXによる資源の再配分 -->
+    <section class="mb-14">
+      <div class="border-b border-slate-200 pb-2 mb-6">
+        <span class="text-xs font-mono font-bold text-sky-700 tracking-wider">SECTION 09</span>
+        <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 mt-1">
+          DXの目的は「人とお金を活動へ戻す」こと
+        </h2>
+      </div>
+
+      <div class="academic-quote bg-sky-50/70 border border-sky-100 rounded p-6 mb-6">
+        <p class="text-xs font-bold text-sky-800 uppercase tracking-widest mb-1 pl-4">Key Proposition</p>
+        <p class="text-base sm:text-lg font-serif font-bold text-slate-900 leading-snug pl-4">
+          DXによって事務負担と固定費を減らし、限られた資源を“人が集まる活動”へ再配分する。
+        </p>
+      </div>
+
+      <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
+        「シニア組織にデジタルは馴染まない」という通弊に陥ってはならない。DXの主眼は全会員をデジタル強者に仕立てることではなく、
+        対応可能な層をデジタルへ移行させることで<strong>紙代・郵送費・役員の手入力作業を極小化し、浮いたリソースを交流企画へ再投資する</strong>点にある。
+      </p>
+
+      <!-- Before / After 比較 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+        <div class="bg-rose-50/40 border border-rose-100 p-5 rounded">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-bold text-rose-900 text-sm">BEFORE（従来型運用）</span>
+            <span class="text-[10px] text-rose-600 font-mono">HIGH-COST &amp; EXHAUSTION</span>
+          </div>
+          <ul class="text-xs sm:text-sm text-slate-600 space-y-2 list-disc list-inside">
+            <li>全件印刷・個別郵送に伴う膨大な通信費</li>
+            <li>出欠・参加費の電話確認と紙台帳の手書き入力</li>
+            <li>役員の自宅作業と個別対応の属人化</li>
+          </ul>
+        </div>
+
+        <div class="bg-sky-50/50 border border-sky-200 p-5 rounded">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-bold text-sky-950 text-sm">AFTER（ハイブリッドDX）</span>
+            <span class="text-[10px] text-sky-700 font-mono">RESOURCE OPTIMIZATION</span>
+          </div>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-2 list-disc list-inside">
+            <li>LINE・Webフォームによる告知と自動集計</li>
+            <li>紙面送付は希望者のみに限定（郵送費の半減）</li>
+            <li>役員作業時間を「新規イベント企画」へ振り向け</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第10章: 12か月改革ロードマップと総括 -->
+    <section class="mb-12">
+      <div class="border-b border-slate-200 pb-2 mb-6">
+        <span class="text-xs font-mono font-bold text-sky-700 tracking-wider">SECTION 10</span>
+        <h2 class="text-xl sm:text-2xl font-serif font-bold text-slate-900 mt-1">
+          今後12か月は「縮小を止める」より「新しい循環をつくる」
+        </h2>
+      </div>
+
+      <div class="academic-quote bg-sky-50/70 border border-sky-100 rounded p-6 mb-6">
+        <p class="text-xs font-bold text-sky-800 uppercase tracking-widest mb-1 pl-4">Key Proposition</p>
+        <p class="text-base sm:text-lg font-serif font-bold text-slate-900 leading-snug pl-4">
+          成功の判断基準を“総会員数だけ”から、参加・継続・担い手・財務を含む4つのKPIへ変える。
+        </p>
+      </div>
+
+      <!-- ロードマップ・クォーター別グリッド -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-6">
+        <div class="border border-slate-200 bg-white p-4 rounded border-t-4 border-slate-700">
+          <span class="text-xs font-mono font-bold text-slate-500">M01–03</span>
+          <h4 class="font-bold text-slate-900 text-sm my-1">選択（棚卸し）</h4>
+          <ul class="text-xs text-slate-600 space-y-1 mt-2">
+            <li>・全事業の3軸評価棚卸し</li>
+            <li>・会員ニーズアンケート実施</li>
+            <li>・新評価KPIの策定</li>
+          </ul>
+        </div>
+        <div class="border border-slate-200 bg-white p-4 rounded border-t-4 border-sky-600">
+          <span class="text-xs font-mono font-bold text-sky-600">M04–06</span>
+          <h4 class="font-bold text-slate-900 text-sm my-1">実験（テスト試行）</h4>
+          <ul class="text-xs text-slate-600 space-y-1 mt-2">
+            <li>・体験イベントの開催</li>
+            <li>・賛助会員制度の試験導入</li>
+            <li>・Web・LINE申込の運用実験</li>
+          </ul>
+        </div>
+        <div class="border border-slate-200 bg-white p-4 rounded border-t-4 border-sky-800">
+          <span class="text-xs font-mono font-bold text-sky-800">M07–09</span>
+          <h4 class="font-bold text-slate-900 text-sm my-1">集中（資源再配分）</h4>
+          <ul class="text-xs text-slate-600 space-y-1 mt-2">
+            <li>・好評企画への予算重点配分</li>
+            <li>・不採算事業の再構成完了</li>
+            <li>・運営委員会体制への移行</li>
+          </ul>
+        </div>
+        <div class="border border-slate-200 bg-white p-4 rounded border-t-4 border-emerald-600">
+          <span class="text-xs font-mono font-bold text-emerald-600">M10–12</span>
+          <h4 class="font-bold text-slate-900 text-sm my-1">定着（制度化）</h4>
+          <ul class="text-xs text-slate-600 space-y-1 mt-2">
+            <li>・KPIに基づく成果検証</li>
+            <li>・新年度予算への構造反映</li>
+            <li>・持続可能組織モデルの確立</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 論文の結語ブロック -->
+      <div class="mt-10 p-6 bg-slate-900 text-white rounded border border-slate-800">
+        <h3 class="text-base font-serif font-bold text-sky-300 mb-2">
+          結語：規模が変わっても、価値と活力を高められる組織へ
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+          いきいき同窓会が目指すべきゴールは、かつての2,000人規模という形式的数値への復帰ではない。
+          組織の規模が変化しようとも、参加するシニア一人ひとりが新たな仲間と出会い、自己実現を果たし、地域社会に活力を還元できるプラットフォームであり続けることである。
+          「会員をどう増やすか」から「誰のために、何を生み出す組織であるか」への問診の転換こそが、次の持続可能な成長モデルを開く唯一の道である。
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
