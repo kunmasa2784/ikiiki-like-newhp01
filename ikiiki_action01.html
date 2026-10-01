@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>同窓会企画の持続的実現に向けた実行戦略レポート</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', '"Helvetica Neue"', 'Arial', '"Hiragino Sans"', '"Meiryo"', 'sans-serif'],
+                        serif: ['"Newsreader"', '"Georgia"', '"Hiragino Mincho ProN"', '"Yu Mincho"', 'serif'],
+                        mono: ['"JetBrains Mono"', '"Fira Code"', 'monospace'],
+                    },
+                    colors: {
+                        journal: {
+                            bg: '#f8fafc',
+                            card: '#ffffff',
+                            text: '#1e293b',
+                            muted: '#64748b',
+                            border: '#e2e8f0',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+        /* オンラインジャーナル特有の読みやすさと微細テクスチャ */
+        body {
+            background-color: #f1f5f9;
+            color: #1e293b;
+            font-feature-settings: "palt" 1;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .journal-sheet {
+            background-color: #ffffff;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+            border-top: 5px solid #3b82f6;
+        }
+
+        /* 数式・引用・図表ラベルのスタイル */
+        .figure-caption {
+            font-size: 0.8rem;
+            letter-spacing: 0.03em;
+            color: #64748b;
+        }
+
+        /* 印刷用調整 */
+        @media print {
+            body { background: white; padding: 0; }
+            .journal-sheet { box-shadow: none; border: none; max-width: 100%; }
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+<body class="py-6 sm:py-12 px-3 sm:px-6">
+
+    <main class="max-w-4xl mx-auto journal-sheet rounded-xl overflow-hidden border border-slate-200">
+        
+        <!-- ジャーナル上部メタデータ（DOI風・分類バッジ・アクセシビリティツール） -->
+        <div class="px-6 sm:px-12 pt-8 pb-6 border-b border-slate-100 bg-slate-50/50">
+            <div class="flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-500 mb-4">
+                <div class="flex items-center gap-2">
+                    <span class="px-2 py-0.5 rounded font-semibold bg-blue-100 text-blue-700 tracking-wide">STRATEGY PAPER</span>
+                    <span>ISSN 2026-0926</span>
+                    <span class="hidden sm:inline">• DOI: 10.2026/alumni.act.01</span>
+                </div>
+                <!-- 読書支援コントローラー（フォントサイズ・印刷） -->
+                <div class="flex items-center gap-2 no-print">
+                    <span class="text-slate-400 font-sans text-xs">文字サイズ:</span>
+                    <button onclick="adjustFontSize(-1)" class="w-6 h-6 flex items-center justify-center rounded bg-white border border-slate-200 hover:bg-slate-100 font-bold transition">A-</button>
+                    <button onclick="adjustFontSize(1)" class="w-6 h-6 flex items-center justify-center rounded bg-white border border-slate-200 hover:bg-slate-100 font-bold transition">A+</button>
+                    <button onclick="window.print()" class="ml-2 px-2 py-0.5 rounded bg-white border border-slate-200 hover:bg-slate-100 font-sans text-xs text-slate-600 transition flex items-center gap-1">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        印刷
+                    </button>
+                </div>
+            </div>
+
+            <!-- 論文タイトル -->
+            <h1 class="text-2xl sm:text-3xl lg:text-[2.1rem] font-bold text-slate-900 leading-snug sm:leading-tight mb-3">
+                同窓会企画の持続的実現に向けた実行戦略プラン
+            </h1>
+            <p class="text-base sm:text-lg text-slate-600 font-serif italic mb-6">
+                ――「参加者の自発的ニーズ」を幹事の負担なく形にする自律分散型アプローチの提唱
+            </p>
+
+            <!-- 執筆・討議メタ情報 -->
+            <div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-slate-500 pt-3 border-t border-slate-200/60 font-sans">
+                <div><strong class="text-slate-700">起案組織：</strong> 同窓会 理事会グループ討議統合推進タスクフォース</div>
+                <div><strong class="text-slate-700">討議期日：</strong> 2026年9月26日</div>
+                <div><strong class="text-slate-700">適用対象：</strong> 全期同窓生・各期クラス会・テーマ別同好会</div>
+            </div>
+        </div>
+
+        <!-- 記事本文エリア -->
+        <article id="articleContent" class="px-6 sm:px-12 py-8 text-base leading-relaxed text-slate-700 space-y-10">
+
+            <!-- 【抄録 / Abstract】 -->
+            <section class="bg-gradient-to-br from-indigo-50/70 via-slate-50 to-blue-50/50 border-l-4 border-indigo-600 p-5 sm:p-6 rounded-r-xl">
+                <div class="flex items-center gap-2 text-indigo-900 font-bold text-xs tracking-wider uppercase mb-2">
+                    <svg class="w-4 h-4 text-indigo-600" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
+                    抄録 / Executive Summary
+                </div>
+                <p class="text-sm sm:text-[0.95rem] text-slate-800 leading-relaxed text-justify mb-3">
+                    本稿は、理事会グループ討議で創出された多種多様な活動アイデアを単なる「希望的観測」に終わらせず、<strong>「誰が、どのように運用すれば無理なく実現・定着できるか」</strong>という実現化メカニズムの視点から体系化した実行戦略である。従来の「役員主導・おもてなし型」からの脱却を図り、<strong>①アジャイルな少人数試行、②発案者を孤立させないペア制、③半日完結・現地解散</strong>を柱とした「自律分散型運用モデル」を提示。さらに募集プロセスの公平化やデジタル格差解消、在校生連携を通じた持続可能な活動基盤の構築指針を定める。
+                </p>
+                <div class="flex flex-wrap items-center gap-1.5 pt-2 text-xs">
+                    <span class="font-semibold text-slate-600">キーワード:</span>
+                    <span class="bg-white/80 border border-slate-200 text-slate-700 px-2 py-0.5 rounded-full">自律分散型運営</span>
+                    <span class="bg-white/80 border border-slate-200 text-slate-700 px-2 py-0.5 rounded-full">現地集合・解散</span>
+                    <span class="bg-white/80 border border-slate-200 text-slate-700 px-2 py-0.5 rounded-full">ペア制</span>
+                    <span class="bg-white/80 border border-slate-200 text-slate-700 px-2 py-0.5 rounded-full">事前エントリー・抽選</span>
+                    <span class="bg-white/80 border border-slate-200 text-slate-700 px-2 py-0.5 rounded-full">異クラス合同枠</span>
+                </div>
+            </section>
+
+            <!-- 1. 実現化に向けた3大原則（デザイン思想） -->
+            <section>
+                <div class="flex items-center gap-3 border-b-2 border-slate-900 pb-2 mb-4">
+                    <span class="text-xs font-mono font-bold px-2 py-1 bg-slate-900 text-white rounded">SECTION 01</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900">実現化に向けた3大デザイン思想</h2>
+                </div>
+                <p class="mb-4 text-slate-600">
+                    どれほど魅力的なアイデアも、役員や特定の幹事（言い出しっぺ）に準備・金銭・当日の案内リスクが集中すれば頓挫します。企画の具現化にあたり、以下の<strong>3大原則</strong>をすべての催しの共通基盤（プロトコル）として定めます。
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+                    <!-- 原則1 -->
+                    <div class="bg-teal-50/60 border border-teal-200 rounded-lg p-4 flex flex-col justify-between hover:shadow-sm transition">
+                        <div>
+                            <div class="text-teal-700 font-bold text-xs uppercase tracking-wider mb-1">Principle 01</div>
+                            <h3 class="text-base font-bold text-teal-950 mb-2">アジャイル型運営（小さく試す）</h3>
+                            <p class="text-xs sm:text-sm text-teal-900/80 leading-relaxed">
+                                最初から大人数のツアーや完璧なマニュアルを作らず、5〜6人の少人数による「お試しプロトタイプ」として実施し、ノウハウを蓄積する。
+                            </p>
+                        </div>
+                        <div class="mt-3 pt-2 border-t border-teal-200/60 text-xs font-semibold text-teal-800">
+                            → 失敗リスクの極小化
+                        </div>
+                    </div>
+                    <!-- 原則2 -->
+                    <div class="bg-indigo-50/60 border border-indigo-200 rounded-lg p-4 flex flex-col justify-between hover:shadow-sm transition">
+                        <div>
+                            <div class="text-indigo-700 font-bold text-xs uppercase tracking-wider mb-1">Principle 02</div>
+                            <h3 class="text-base font-bold text-indigo-950 mb-2">ペア制・分担制の義務化</h3>
+                            <p class="text-xs sm:text-sm text-indigo-900/80 leading-relaxed">
+                                発案者に丸投げせず、経験者やサポーターと必ず「2名1組」で企画チームを構成。孤立感をなくし、ノウハウの伝承を図る。
+                            </p>
+                        </div>
+                        <div class="mt-3 pt-2 border-t border-indigo-200/60 text-xs font-semibold text-indigo-800">
+                            → 「言い出しっぺ」の孤立防止
+                        </div>
+                    </div>
+                    <!-- 原則3 -->
+                    <div class="bg-amber-50/60 border border-amber-200 rounded-lg p-4 flex flex-col justify-between hover:shadow-sm transition">
+                        <div>
+                            <div class="text-amber-700 font-bold text-xs uppercase tracking-wider mb-1">Principle 03</div>
+                            <h3 class="text-base font-bold text-amber-950 mb-2">半日完結・現地解散</h3>
+                            <p class="text-xs sm:text-sm text-amber-900/80 leading-relaxed">
+                                幹事の負担源となる「大規模な飲食店予約」や「出欠確定のプレッシャー」を構造的に排除。正午頃に公式解散し、午後は任意自由行動とする。
+                            </p>
+                        </div>
+                        <div class="mt-3 pt-2 border-t border-amber-200/60 text-xs font-semibold text-amber-800">
+                            → 拘束時間と引率負荷の半減
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. アイデアを実現可能にする「5つの実施モデル」 -->
+            <section>
+                <div class="flex items-center gap-3 border-b-2 border-slate-900 pb-2 mb-4">
+                    <span class="text-xs font-mono font-bold px-2 py-1 bg-slate-900 text-white rounded">SECTION 02</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900">企画アイデアの具現化：5つの運用モデル</h2>
+                </div>
+                <p class="text-slate-600 mb-6">
+                    グループ討議で出された多角的な企画案を、準備の手間・規模感・コスト設計の観点から<strong>5つの運用パターン</strong>に分類しました。企画の性格に合わせて最適なパターンを適用することで、即座に実行へ移すことが可能です。
+                </p>
+
+                <!-- マトリクスカード群 -->
+                <div class="space-y-4">
+
+                    <!-- モデル1: 即時実践型 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden hover:border-teal-300 transition duration-150">
+                        <div class="bg-teal-50/80 px-4 sm:px-6 py-3 border-b border-teal-100 flex flex-wrap items-center justify-between gap-2">
+                            <div class="flex items-center gap-2">
+                                <span class="bg-teal-600 text-white font-mono text-xs px-2 py-0.5 rounded font-bold">MODEL 01</span>
+                                <h3 class="font-bold text-slate-900 text-base">即時実践型（準備・設営ゼロ）</h3>
+                            </div>
+                            <span class="text-xs font-semibold text-teal-800 bg-teal-100/70 px-2.5 py-0.5 rounded-full">所要準備：最短1週間 / 予算：各自実費</span>
+                        </div>
+                        <div class="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-12 gap-4 text-sm">
+                            <div class="md:col-span-4 border-b md:border-b-0 md:border-r border-slate-100 pb-3 md:pb-0 md:pr-4">
+                                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">対象企画アイデア</div>
+                                <ul class="list-disc list-inside text-slate-700 space-y-1">
+                                    <li><strong>手ぶらお花見会</strong>（海老川等）</li>
+                                    <li><strong>早朝ユニバーサルスポーツ</strong>（ボッチャ・モルック体験）</li>
+                                    <li><strong>身近な市内神社・散歩</strong></li>
+                                </ul>
+                            </div>
+                            <div class="md:col-span-8 space-y-2">
+                                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">実現化のメカニズム</div>
+                                <p class="text-slate-600 text-xs sm:text-sm">
+                                    席取りや宴会予約を一切排除。「日時と集合場所」のみを提示し、各自マイペースで散策。スポーツは競技会にせず、公民館等の冷房設備のある部屋で「まずは触ってみる体験会」として小さく立ち上げます。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- モデル2: 日銀モデル -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden hover:border-indigo-300 transition duration-150">
+                        <div class="bg-indigo-50/80 px-4 sm:px-6 py-3 border-b border-indigo-100 flex flex-wrap items-center justify-between gap-2">
+                            <div class="flex items-center gap-2">
+                                <span class="bg-indigo-600 text-white font-mono text-xs px-2 py-0.5 rounded font-bold">MODEL 02</span>
+                                <h3 class="font-bold text-slate-900 text-base">日銀モデル（半日探訪・少人数制）</h3>
+                            </div>
+                            <span class="text-xs font-semibold text-indigo-800 bg-indigo-100/70 px-2.5 py-0.5 rounded-full">定員：5〜6名（最大12名） / 解散：正午</span>
+                        </div>
+                        <div class="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-12 gap-4 text-sm">
+                            <div class="md:col-span-4 border-b md:border-b-0 md:border-r border-slate-100 pb-3 md:pb-0 md:pr-4">
+                                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">対象企画アイデア</div>
+                                <ul class="list-disc list-inside text-slate-700 space-y-1">
+                                    <li><strong>美術館・国立博物館巡り</strong></li>
+                                    <li><strong>東京ぶらり街歩き</strong>（変貌する駅）</li>
+                                    <li><strong>アンテナショップ巡り</strong></li>
+                                    <li><strong>ワールドグルメ探訪</strong></li>
+                                </ul>
+                            </div>
+                            <div class="md:col-span-8 space-y-2">
+                                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">実現化のメカニズム</div>
+                                <p class="text-slate-600 text-xs sm:text-sm">
+                                    先行成功事例（船橋駅集合→電車移動→見学→12時現地解散）をテンプレート化。国立施設等の<strong>「65歳以上無料・シニア割引枠」</strong>を活用し手配負担を低減。昼食は予約せず「各自自由・希望者のみ」とすることで幹事の引率負荷をゼロにします。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- モデル3: 自活型ワークショップ -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden hover:border-amber-300 transition duration-150">
+                        <div class="bg-amber-50/80 px-4 sm:px-6 py-3 border-b border-amber-100 flex flex-wrap items-center justify-between gap-2">
+                            <div class="flex items-center gap-2">
+                                <span class="bg-amber-600 text-white font-mono text-xs px-2 py-0.5 rounded font-bold">MODEL 03</span>
+                                <h3 class="font-bold text-slate-900 text-base">自活型ワークショップ（体験・文化継承）</h3>
+                            </div>
+                            <span class="text-xs font-semibold text-amber-800 bg-amber-100/70 px-2.5 py-0.5 rounded-full">会計：参加費制（受益者負担） / 完結型</span>
+                        </div>
+                        <div class="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-12 gap-4 text-sm">
+                            <div class="md:col-span-4 border-b md:border-b-0 md:border-r border-slate-100 pb-3 md:pb-0 md:pr-4">
+                                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">対象企画アイデア</div>
+                                <ul class="list-disc list-inside text-slate-700 space-y-1">
+                                    <li><strong>祭り寿司等の郷土料理体験</strong></li>
+                                    <li><strong>持ち帰り型手品講座</strong></li>
+                                    <li><strong>吹矢・ボウリング講習</strong></li>
+                                </ul>
+                            </div>
+                            <div class="md:col-span-8 space-y-2">
+                                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">実現化のメカニズム</div>
+                                <p class="text-slate-600 text-xs sm:text-sm">
+                                    同窓会の全体会計に依存せず、公民館調理室等の安価な公共施設を確保。材料費・参加費をその場で頭割り精算する「受益者負担（独立採算）」とし、役員会の予算承認待ちによる停滞を防止します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- モデル4: 制度相乗り型 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden hover:border-emerald-300 transition duration-150">
+                        <div class="bg-emerald-50/80 px-4 sm:px-6 py-3 border-b border-emerald-100 flex flex-wrap items-center justify-between gap-2">
+                            <div class="flex items-center gap-2">
+                                <span class="bg-emerald-600 text-white font-mono text-xs px-2 py-0.5 rounded font-bold">MODEL 04</span>
+                                <h3 class="font-bold text-slate-900 text-base">制度相乗り型（合同バス・地域交通活用）</h3>
+                            </div>
+                            <span class="text-xs font-semibold text-emerald-800 bg-emerald-100/70 px-2.5 py-0.5 rounded-full">規模：15名以上 / 補助金＋事後名簿提出</span>
+                        </div>
+                        <div class="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-12 gap-4 text-sm">
+                            <div class="md:col-span-4 border-b md:border-b-0 md:border-r border-slate-100 pb-3 md:pb-0 md:pr-4">
+                                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">対象企画アイデア</div>
+                                <ul class="list-disc list-inside text-slate-700 space-y-1">
+                                    <li><strong>クラス合同バスツアー</strong></li>
+                                    <li><strong>市バス利用の自主ツアー</strong></li>
+                                    <li><strong>日光等の遠方自然体験</strong></li>
+                                </ul>
+                            </div>
+                            <div class="md:col-span-8 space-y-2">
+                                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">実現化のメカニズム</div>
+                                <p class="text-slate-600 text-xs sm:text-sm">
+                                    年2回制限のある「同窓会本体枠」ではなく、**「異クラス合同枠（15名以上）」**を活用。事前名簿の提出縛りをなくし、「事後名簿提出」をルール化することで、直前キャンセル等に伴う幹事の事務負担を劇的に緩和します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- モデル5: 既存枠併催型 -->
+                    <div class="border border-slate-200 rounded-xl overflow-hidden hover:border-rose-300 transition duration-150">
+                        <div class="bg-rose-50/80 px-4 sm:px-6 py-3 border-b border-rose-100 flex flex-wrap items-center justify-between gap-2">
+                            <div class="flex items-center gap-2">
+                                <span class="bg-rose-600 text-white font-mono text-xs px-2 py-0.5 rounded font-bold">MODEL 05</span>
+                                <h3 class="font-bold text-slate-900 text-base">既存枠併催型（低コスト文化・交流）</h3>
+                            </div>
+                            <span class="text-xs font-semibold text-rose-800 bg-rose-100/70 px-2.5 py-0.5 rounded-full">会場費：ゼロ（既存予約枠に相乗り）</span>
+                        </div>
+                        <div class="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-12 gap-4 text-sm">
+                            <div class="md:col-span-4 border-b md:border-b-0 md:border-r border-slate-100 pb-3 md:pb-0 md:pr-4">
+                                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">対象企画アイデア</div>
+                                <ul class="list-disc list-inside text-slate-700 space-y-1">
+                                    <li><strong>理事会前後の1時間ミニ講演会</strong></li>
+                                    <li><strong>家庭菜園の朝市・100円バザー</strong></li>
+                                    <li><strong>囲碁・将棋・室内ゲーム</strong></li>
+                                </ul>
+                            </div>
+                            <div class="md:col-span-8 space-y-2">
+                                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">実現化のメカニズム</div>
+                                <p class="text-slate-600 text-xs sm:text-sm">
+                                    イベント単独での会場手配や集客を行わず、理事会や定期総会など「人が既に集まる場」の前後に組み込みます。外部プロへの高額謝礼を避け、会員の知人や地域専門家を口コミで招くことで低コスト開催を担保します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 3. 公平性とデジタル格差を解消する募集運用サイクル -->
+            <section>
+                <div class="flex items-center gap-3 border-b-2 border-slate-900 pb-2 mb-4">
+                    <span class="text-xs font-mono font-bold px-2 py-1 bg-slate-900 text-white rounded">SECTION 03</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900">募集プロセスの公平化とデジタル格差の克服</h2>
+                </div>
+                <p class="text-slate-600 mb-6">
+                    「人気企画が先着順ですぐ埋まり不満が出る」「HPを見ていないと気付けない」という課題を解決するため、募集プロセスを<strong>「事前予告＋期間エントリー制」</strong>へ刷新します。
+                </p>
+
+                <!-- フローダイアグラム -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 sm:p-6 my-6">
+                    <div class="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider mb-4 text-center sm:text-left">
+                        RECRUITMENT WORKFLOW : 新・募集サイクルの4段階
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 relative">
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200 text-center flex flex-col justify-between">
+                            <div>
+                                <span class="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-[10px] font-mono font-bold mb-1">STEP 01</span>
+                                <h4 class="font-bold text-xs sm:text-sm text-slate-800">半期予定の先行公開</h4>
+                                <p class="text-[11px] text-slate-500 mt-1">HP上に半年間の開催カレンダーを一括提示</p>
+                            </div>
+                            <div class="text-[10px] font-semibold text-blue-600 mt-2">【不意打ち感の解消】</div>
+                        </div>
+
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200 text-center flex flex-col justify-between">
+                            <div>
+                                <span class="inline-block px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-[10px] font-mono font-bold mb-1">STEP 02</span>
+                                <h4 class="font-bold text-xs sm:text-sm text-slate-800">期間エントリー受付</h4>
+                                <p class="text-[11px] text-slate-500 mt-1">1〜2週間の申込受付期間を確保（先着ではない）</p>
+                            </div>
+                            <div class="text-[10px] font-semibold text-blue-600 mt-2">【平等な応募機会】</div>
+                        </div>
+
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200 text-center flex flex-col justify-between">
+                            <div>
+                                <span class="inline-block px-2 py-0.5 bg-indigo-100 text-indigo-700 rounded text-[10px] font-mono font-bold mb-1">STEP 03</span>
+                                <h4 class="font-bold text-xs sm:text-sm text-slate-800">抽選・優先枠の付与</h4>
+                                <p class="text-[11px] text-slate-500 mt-1">超過時は抽選。落選者には次回類似企画の優先枠</p>
+                            </div>
+                            <div class="text-[10px] font-semibold text-indigo-600 mt-2">【不公平感の払拭】</div>
+                        </div>
+
+                        <div class="bg-white p-3.5 rounded-lg border border-slate-200 text-center flex flex-col justify-between">
+                            <div>
+                                <span class="inline-block px-2 py-0.5 bg-teal-100 text-teal-700 rounded text-[10px] font-mono font-bold mb-1">STEP 04</span>
+                                <h4 class="font-bold text-xs sm:text-sm text-slate-800">半日開催・現地解散</h4>
+                                <p class="text-[11px] text-slate-500 mt-1">現地集合で実施し、12時頃に解散・自由行動へ</p>
+                            </div>
+                            <div class="text-[10px] font-semibold text-teal-600 mt-2">【幹事負担の最小化】</div>
+                        </div>
+                    </div>
+
+                    <!-- デジタル弱者救済策の付記 -->
+                    <div class="mt-4 pt-4 border-t border-slate-200/80 flex flex-col sm:flex-row items-start sm:items-center gap-3 text-xs text-slate-600">
+                        <div class="px-2 py-1 bg-amber-100 text-amber-900 font-bold rounded shrink-0">スマホ講習連携</div>
+                        <div>
+                            同窓会内のパソコン・スマホ研究会と連動し、<strong>「イベントへのWeb申込操作」そのものを講習カリキュラムの題材に指定</strong>。操作不安を解消しつつ、自然なアクセス習慣を育成します。
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. 担い手を枯渇させない組織・人財アプローチ -->
+            <section>
+                <div class="flex items-center gap-3 border-b-2 border-slate-900 pb-2 mb-4">
+                    <span class="text-xs font-mono font-bold px-2 py-1 bg-slate-900 text-white rounded">SECTION 04</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900">持続可能な担い手づくりと組織の柔軟化</h2>
+                </div>
+                <p class="text-slate-600 mb-4">
+                    「理事のなり手がいない」「従来のクラス会が機能しない」という構造的課題に対し、組織の心理的ハードルを下げ、自然に人が流入するアプローチへ転換します。
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+                    <div class="border border-slate-200 p-4 rounded-lg bg-white">
+                        <div class="text-blue-600 text-xs font-bold uppercase mb-1">Role Design</div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-2">「お世話役」呼称への刷新</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            「理事」「役員」という重圧感を廃止し、「企画限定幹事」「世話役」など関わりやすい名称で単発公募を実施。
+                        </p>
+                    </div>
+
+                    <div class="border border-slate-200 p-4 rounded-lg bg-white">
+                        <div class="text-indigo-600 text-xs font-bold uppercase mb-1">Pipeline</div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-2">市民大学（在校生）連携</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            各期ルームアドバイザー（RA）の協力を得て、授業前1分PRを定例化。卒業と同時に行事へ合流する導線を構築。
+                        </p>
+                    </div>
+
+                    <div class="border border-slate-200 p-4 rounded-lg bg-white">
+                        <div class="text-teal-600 text-xs font-bold uppercase mb-1">Community</div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-2">横断型同好会への支援</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            弱体化しがちなクラス単位への執着を緩め、関心・趣味で集まる「横断型コミュニティ（歩こう会・美食等）」を活動の中心に据える。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. 実践ロードマップ（フェーズ別実装計画） -->
+            <section>
+                <div class="flex items-center gap-3 border-b-2 border-slate-900 pb-2 mb-4">
+                    <span class="text-xs font-mono font-bold px-2 py-1 bg-slate-900 text-white rounded">SECTION 05</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900">実践ロードマップ（段階的導入スケジュール）</h2>
+                </div>
+                <p class="text-slate-600 mb-6">
+                    無理のない定着と検証を行うため、以下の3段階で順次展開します。
+                </p>
+
+                <div class="border-l-2 border-slate-200 ml-3 sm:ml-4 pl-6 sm:pl-8 space-y-6">
+                    
+                    <!-- Phase 1 -->
+                    <div class="relative">
+                        <div class="absolute -left-[31px] sm:-left-[39px] top-0 w-4 h-4 rounded-full bg-teal-500 border-4 border-white shadow"></div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-teal-100 text-teal-800">PHASE 1 : 直近 3〜6ヶ月</span>
+                            <span class="text-xs font-semibold text-slate-600">【トライアル検証期】</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-1">負担ゼロ企画と日銀モデルの横展開テスト</h4>
+                        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 mt-2 space-y-1">
+                            <li>手ぶらお花見会・早朝ボッチャ/モルック体験会の試験開催</li>
+                            <li>「日銀モデル」を踏襲した上野国立博物館（シニア無料枠）半日見学のペア制実施</li>
+                            <li>参加者および幹事の負担感ヒアリングと運用の微修正</li>
+                        </ul>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="relative">
+                        <div class="absolute -left-[31px] sm:-left-[39px] top-0 w-4 h-4 rounded-full bg-blue-500 border-4 border-white shadow"></div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-blue-100 text-blue-800">PHASE 2 : 6ヶ月〜1年</span>
+                            <span class="text-xs font-semibold text-slate-600">【制度・インフラ整備期】</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-1">HPエントリー抽選制と異クラス合同枠の周知</h4>
+                        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 mt-2 space-y-1">
+                            <li>HP上での半年先行カレンダー提示とエントリー受付の本格運用</li>
+                            <li>「異クラス合同枠（15名以上・事後名簿提出）」申請手続きの標準化</li>
+                            <li>スマホ講習会でのイベント申込体験カリキュラムの定例化</li>
+                        </ul>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="relative">
+                        <div class="absolute -left-[31px] sm:-left-[39px] top-0 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white shadow"></div>
+                        <div class="flex items-center gap-2">
+                            <span class="font-mono text-xs font-bold px-2 py-0.5 rounded bg-indigo-100 text-indigo-800">PHASE 3 : 1年以降〜</span>
+                            <span class="text-xs font-semibold text-slate-600">【自立定着・エコシステム確立期】</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm sm:text-base mt-1">在校生合流と自律型コミュニティの定着</h4>
+                        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 mt-2 space-y-1">
+                            <li>市民大学RA経由での新卒会員の定常的な行事参加</li>
+                            <li>単発「お世話役」公募による役員外企画リーダーの自立的な輩出</li>
+                            <li>趣味・関心ごとの横断コミュニティへの情報発信サポートの恒常化</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 6. 提言と結言（Key Takeaways） -->
+            <section class="mt-12 pt-6 border-t border-slate-200">
+                <div class="bg-slate-900 text-slate-100 p-6 sm:p-8 rounded-xl shadow-md">
+                    <div class="flex items-center gap-2 text-blue-400 font-mono text-xs uppercase tracking-wider mb-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Conclusion & Core Motto
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3">
+                        企画実現の合言葉：「みんなで小さく試す、集合は現地、解散はお昼」
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 text-justify">
+                        同窓会活動の活性化とは、役員が過密なスケジュールと手配を抱え込むことではありません。「会員が自らの好奇心を出発点として、仲間とともに小さく形にできる舞台装置（プラットフォーム）を整えること」こそが本質です。発案者には相棒（ペア）を付け、解散を早めて自由度を高めることで、主催者も参加者も等しく笑顔で継続できるコミュニティを実現します。
+                    </p>
+                    <div class="text-[11px] text-slate-400 border-t border-slate-800 pt-3 flex flex-wrap justify-between items-center">
+                        <span>文責：同窓会 理事会グループ討議統合推進タスクフォース</span>
+                        <span>発行：2026年10月度 運用ガイドライン</span>
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- 操作用スクリプト（フォントサイズ調整など） -->
+    <script>
+        let currentFontSize = 16;
+        function adjustFontSize(delta) {
+            const article = document.getElementById('articleContent');
+            currentFontSize = Math.min(Math.max(currentFontSize + delta, 13), 20);
+            article.style.fontSize = currentFontSize + 'px';
+        }
+    </script>
+</body>
+</html>
